@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Cotización de Samsa Creative para ionava: video explicativo.">
+<title>ionava · Videos explicativos</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<style>
+/* Layout: línea de landings Samsa (hero navy con aurora, bloques claros, rótulos verdes, titulares con degradé). El concepto a crayón entra como una hoja de papel dentro de ese sistema. */
+:root{
+  --ground:#F3F5F8; --tint:#EDF1F6; --card:#fff; --line:#E2E7EE;
+  --ink:#182741; --hero:#0E1B34; --muted:#59626F; --label:#8A94A2;
+  --green:#2FA84F; --green-br:#39C25E; --blue:#3B82C4; --blue-br:#54A0E4;
+  --paper:#f6f1e8; --teal:#5f9c9a;
+  --sans:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+p{margin:0} h1,h2,h3{margin:0;text-wrap:balance}
+.wrap{max-width:960px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.wide{max-width:1280px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.num{font-variant-numeric:tabular-nums}
+.grad{padding-right:.03em;background:linear-gradient(96deg,var(--green),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* hero */
+.hero{position:relative;background:var(--hero);color:#fff;overflow:hidden}
+.hero__inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:34px clamp(16px,4vw,40px) clamp(44px,6vw,72px)}
+.hero__bar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.hero__logo{height:clamp(38px,3.4vw,50px);width:auto}
+.hero__date{font-size:13px;color:#9DB0CC}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,4vw,64px);align-items:center;margin-top:clamp(40px,6vw,80px)}
+.hero__eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--green-br);margin:0 0 22px}
+.hero__title{font-weight:800;font-size:clamp(44px,6.6vw,88px);line-height:1.04;letter-spacing:-.03em}
+.hero__title .grad{background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text}
+.hero__sub{max-width:38ch;color:#C3D0E4;font-size:clamp(15px,1.5vw,18px);font-weight:500;line-height:1.5;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18)}
+.facts{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:32px}
+.fact{display:flex;flex-direction:column;gap:3px}
+.fact__v{font-size:clamp(24px,3vw,34px);font-weight:400;line-height:1;color:#fff}
+.fact:first-child .fact__v{color:var(--green-br)}
+.fact__k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8FA1BC}
+.hero__fig{margin:0;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.hero__fig img{width:100%;height:auto}
+.hero__fig figcaption{background:rgba(255,255,255,.06);color:#9DB0CC;font-size:12px;padding:10px 14px;letter-spacing:.04em}
+.aurora{position:absolute;inset:0;z-index:1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.blob.b1{width:52vw;height:52vw;left:-12vw;top:-14vw;background:radial-gradient(circle,#2EBE63,transparent 62%)}
+.blob.b2{width:46vw;height:46vw;right:-10vw;top:6vw;background:radial-gradient(circle,#2F79C8,transparent 62%)}
+.blob.b3{width:40vw;height:40vw;left:26vw;bottom:-18vw;background:radial-gradient(circle,#1FA0A6,transparent 62%)}
+@media (prefers-reduced-motion:no-preference){
+  .blob.b1{animation:d1 20s ease-in-out infinite}.blob.b2{animation:d2 24s ease-in-out infinite}.blob.b3{animation:d3 28s ease-in-out infinite}
+}
+@keyframes d1{50%{transform:translate(6vw,4vw)}}@keyframes d2{50%{transform:translate(-5vw,5vw)}}@keyframes d3{50%{transform:translate(4vw,-4vw)}}
+
+/* bloques */
+.block{padding-block:clamp(56px,8vw,88px)}
+.block--tint{background:var(--tint)}
+.block--paper{background:var(--paper)}
+.seclabel{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin:0 0 30px;display:flex;align-items:center;gap:18px}
+.seclabel::after{content:"";flex:1;height:1px;background:var(--line)}
+.block--paper .seclabel::after{background:#e2d9c8}
+.bigt{font-weight:800;font-size:clamp(32px,4.8vw,60px);line-height:1.1;letter-spacing:-.015em}
+.body-lg{font-size:17px;color:var(--muted);line-height:1.68;max-width:62ch;margin-top:24px}
+.body-lg p+p{margin-top:15px}
+
+/* reel */
+.reel{display:block;position:relative;overflow:hidden;background:var(--hero);color:#fff;text-decoration:none}
+.reel img{width:100%;aspect-ratio:21/9;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.reel:hover img,.reel:focus-visible img{transform:scale(1.03)}
+.reel__bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:clamp(18px,4vw,54px);background:linear-gradient(to top,rgba(14,27,52,.92),rgba(14,27,52,.3) 70%,transparent)}
+.reel__l b{display:block;font-weight:700;font-size:clamp(22px,4vw,48px);line-height:1.14;letter-spacing:-.015em}
+.reel__l span{font-size:clamp(13px,1.4vw,16px);color:#AEBED4;display:block;margin-top:7px;max-width:44ch}
+.cta{display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:40px;background:linear-gradient(96deg,var(--green-br),var(--blue-br));color:#0E1B34;font-weight:800;font-size:13.5px;white-space:nowrap}
+.cta::before{content:"";border-left:11px solid #0E1B34;border-top:7px solid transparent;border-bottom:7px solid transparent}
+
+/* quiénes somos */
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 28px 30px;position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+.pill::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(96deg,#39C25E,#54A0E4);opacity:0;transition:opacity .3s}
+.pill:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(24,39,65,.13)}
+.pill:hover::after{opacity:1}
+.pill__k{font-size:20px;font-weight:400;line-height:1.2;margin-bottom:12px}
+.pill__k .g{color:var(--green)}
+.pill p{font-size:14px;color:var(--muted);line-height:1.6}
+.pill p+p{margin-top:10px}
+.bleed{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line)}
+.cell{position:relative;background:var(--card);overflow:hidden}
+.cell img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.cell:hover img{transform:scale(1.04)}
+.cap2{position:absolute;left:0;right:0;bottom:0;padding:clamp(14px,1.8vw,24px);background:linear-gradient(to top,rgba(14,27,52,.93),rgba(14,27,52,.4) 65%,transparent);color:#fff}
+.cap2 b{display:block;font-weight:400;font-size:clamp(15px,1.6vw,20px);line-height:1.15}
+.cap2 span{display:block;font-size:clamp(11.5px,1.1vw,13px);color:#C3D0E4;margin-top:4px}
+.marcas{background:var(--tint);border-bottom:1px solid var(--line);padding-block:clamp(46px,6.5vw,88px)}
+.marcas .k{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--label);text-align:center;margin-bottom:clamp(24px,3vw,40px)}
+.marcas img{width:100%;max-width:1100px;margin-inline:auto;height:auto}
+
+/* concepto */
+.concept-note{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:13px;color:var(--muted);background:#fff;border:1px solid #e2d9c8;border-radius:40px;padding:8px 16px}
+.concept-note b{color:var(--ink)}
+.howto{display:flex;align-items:center;gap:12px;margin:clamp(34px,4vw,48px) 0 14px;font-size:14px;font-weight:600;color:var(--ink)}
+.howto svg{width:44px;height:20px;flex:none}
+.compare{display:grid;grid-template-columns:1fr;gap:clamp(36px,5vw,64px)}
+.cap{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:baseline}
+.opt{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin-top:clamp(28px,4vw,44px)}
+.opt span{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.opt2{margin-top:clamp(56px,7vw,88px);padding-top:clamp(8px,2vw,16px);border-top:1px solid #e2d9c8}
+.sheet{margin-top:clamp(56px,7vw,88px)}
+.sheet h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.01em}
+.sheet p{font-size:16px;color:var(--muted);max-width:62ch;margin-top:12px}
+.sheet figure{margin:24px 0 0;background:#fff;border:1px solid #e2d9c8;border-radius:14px;overflow:hidden}
+.sheet img{width:100%;height:auto}
+.sheet-ph{position:relative;margin-top:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:clamp(16px,2.5vw,28px);background:#fff;border:1px solid #e2d9c8;border-radius:14px}
+.sheet-ph span{display:flex;align-items:flex-end;justify-content:center;aspect-ratio:3/4;border:2px dashed #d9cfbd;border-radius:10px;padding:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--label);background:var(--paper)}
+.sheet-ph span.wide2{grid-column:span 2;aspect-ratio:auto;min-height:120px}
+.sheet-ph em{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-style:normal;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border-radius:40px;background:linear-gradient(96deg,var(--green-br),var(--blue-br));color:#0E1B34;white-space:nowrap}
+@media (max-width:620px){.sheet-ph{grid-template-columns:repeat(2,minmax(0,1fr))}}
+[data-style-only][hidden]{display:none!important}
+.ba{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;border-radius:14px;background:#e9e2d4;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 20px 40px -26px rgba(24,39,65,.45)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .top{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(14,27,52,.25);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--pos,50%);transform:translate(-50%,-50%);display:flex;align-items:center;gap:6px;padding:9px 14px;border-radius:40px;background:linear-gradient(96deg,var(--green-br),var(--blue-br));color:#0E1B34;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;box-shadow:0 6px 18px rgba(14,27,52,.35);pointer-events:none}
+.ba .knob svg{width:14px;height:14px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;pointer-events:none}
+.ba input:focus-visible ~ .knob{outline:3px solid var(--ink);outline-offset:3px}
+.ba .tag{position:absolute;top:12px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:6px 10px;border-radius:30px;pointer-events:none}
+.ba .tag.l{left:12px;background:rgba(14,27,52,.78);color:#fff}
+.ba .tag.r{right:12px;background:rgba(255,255,255,.92);color:var(--ink)}
+.ba.touched .knob span{display:none}
+.cap{margin-top:14px;display:grid;gap:4px}
+.cap b{font-size:15px}
+.cap p{font-size:14px;color:var(--muted)}
+.traits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:clamp(36px,4vw,52px)}
+.trait{background:#fff;border:1px solid #e2d9c8;border-radius:14px;padding:24px;display:grid;gap:8px;align-content:start;min-width:0}
+.trait h3{font-size:17px;font-weight:700}
+.trait p{font-size:14px;color:var(--muted);line-height:1.6}
+.swatches{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.swatches i{width:26px;height:26px;border-radius:50%;display:block;box-shadow:inset 0 0 0 1px rgba(24,39,65,.12)}
+
+/* desglose */
+.tbl-wrap{overflow-x:auto;margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:440px}
+th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--label);text-align:right;padding:16px 20px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+td{padding:16px 20px;text-align:right;border-bottom:1px solid var(--line);font-weight:500}
+tfoot td{border-bottom:0;font-weight:800;background:var(--tint)}
+.bar{display:block;height:5px;margin-top:8px;border-radius:3px;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+
+/* alcance */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;counter-reset:s}
+.steps li{background:#fff;padding:22px 20px 24px;display:grid;gap:6px;align-content:start;counter-increment:s;min-width:0}
+.steps li::before{content:"0" counter(s);font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--green)}
+.steps b{font-size:15px}
+.steps span{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* equipo */
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:40px}
+.team .pill__k{font-size:18px}
+.aside{margin-top:22px;font-size:14px;color:var(--muted);font-style:italic}
+
+/* inversión */
+.price{background:var(--hero);color:#fff;border-radius:18px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(26px,4vw,56px);position:relative;overflow:hidden}
+.price .seclabel{color:var(--green-br)}
+.price .seclabel::after{background:rgba(255,255,255,.15)}
+.price .bigt{color:#fff;font-size:clamp(28px,3.8vw,46px)}
+.price .grad{background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text}
+.price .body-lg{color:#C3D0E4;font-size:16px}
+.opts{display:grid;gap:18px;align-content:start;min-width:0}
+.optd{font-size:14px;line-height:1.55;color:#C3D0E4;margin:0}
+.optk{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green-br)}
+.calc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px;display:grid;gap:16px;align-content:start;min-width:0}
+.calc label{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#9DB0CC;font-weight:700;display:flex;justify-content:space-between;gap:10px}
+.calc output{color:#fff;font-size:15px;letter-spacing:0;text-transform:none}
+.calc input[type=range]{width:100%;accent-color:var(--green-br)}
+.rowv{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid rgba(255,255,255,.14);padding-top:14px;font-variant-numeric:tabular-nums}
+.rowv span{font-size:14px;color:#9DB0CC}
+.rowv b{font-size:17px}
+.rowv.total b{font-size:28px;font-weight:800;color:var(--green-br)}
+.calc small{color:#8FA1BC;font-size:12.5px;line-height:1.5}
+
+/* condiciones */
+.boxes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:22px}
+.boxes:has(.box--cond:only-child){grid-template-columns:1fr}
+.box--cond ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+@media (max-width:700px){.box--cond ul{grid-template-columns:1fr}}
+.box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:14px;align-content:start;min-width:0}
+.box .k{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--label)}
+.box ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.box li{position:relative;padding-left:18px;font-size:14px;color:var(--muted);line-height:1.55}
+.box li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.box li b{color:var(--ink)}
+
+/* cierre */
+.close{position:relative;background:var(--hero);color:#fff;overflow:hidden}
+.close .inner{position:relative;z-index:2;padding-block:clamp(64px,9vw,110px)}
+.close .bigt{color:#fff}
+.close .bigt .grad{background:linear-gradient(96deg,var(--green-br),var(--blue-br));-webkit-background-clip:text;background-clip:text}
+.contact{display:flex;gap:44px;flex-wrap:wrap;margin-top:36px}
+.contact div{display:grid;gap:4px}
+.contact span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8FA1BC}
+.contact b{font-size:18px;user-select:all}
+.contact a{color:inherit;text-decoration:none}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:64px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:12px;color:#8FA1BC}
+.foot img{height:30px;width:auto}
+
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (max-width:980px){
+  .hero__grid,.price{grid-template-columns:1fr}
+  .cols3,.traits,.boxes{grid-template-columns:1fr}
+  .team{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bleed{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){.team,.steps{grid-template-columns:1fr}}
+
+/* ionava: línea Samsa + línea de tiempo de cortes como pieza del hero */
+:root{--io-navy:#0B1340;--io-cobalt:#1E2D9C;--io-gold:#FFC801}
+html{background:var(--ground)}
+.tk{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+.traits{grid-template-columns:repeat(4,minmax(0,1fr))}
+.trait{border-color:var(--line)}
+.quote{margin:34px 0 0;padding:4px 0 4px 22px;border-left:3px solid var(--green-br);font-size:clamp(18px,2vw,22px);font-weight:700;line-height:1.45;max-width:48ch;color:var(--ink)}
+/* hero: cortes */
+.cut{margin:0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:clamp(18px,2.5vw,28px);display:grid;gap:10px;min-width:0}
+.cut__head{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#9DB0CC}
+.cut__head span:last-child{color:var(--green-br)}
+.cut__bar{display:grid;gap:3px;margin-bottom:8px}
+.cut__bar.a{grid-template-columns:repeat(6,minmax(0,1fr))}
+.cut__bar.b{grid-template-columns:repeat(4,minmax(0,1fr));width:66.666%}
+.cut__bar span{min-width:0;height:62px;display:flex;align-items:flex-end;padding:8px;border-radius:6px;font-size:11.5px;font-weight:700;line-height:1.2;color:#fff;background:linear-gradient(160deg,var(--io-cobalt),var(--io-navy));border-top:3px solid var(--green-br);overflow-wrap:anywhere}
+.cut__bar.b span{border-top-color:var(--blue-br)}
+.cut__ruler{display:grid;grid-template-columns:repeat(6,1fr) auto;font-size:10.5px;color:#8FA1BC;border-top:1px dashed rgba(255,255,255,.2);padding-top:6px}
+.cut figcaption{font-size:12.5px;color:#9DB0CC;line-height:1.5;margin-top:4px}
+/* contenido */
+.vids{display:grid;grid-template-columns:3fr 2fr;gap:22px;margin-top:40px}
+.vid{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;min-width:0}
+.vid__h{display:grid;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.vid__h h3{font-size:19px;font-weight:800}
+.caps{list-style:none;margin:0;padding:0;counter-reset:c}
+.caps[start="7"]{counter-reset:c 6}
+.caps li{counter-increment:c;display:grid;grid-template-columns:38px 1fr;column-gap:8px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.caps li:last-child{border-bottom:0;padding-bottom:0}
+.caps li::before{content:counter(c,decimal-leading-zero);grid-row:span 2;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--green);padding-top:2px}
+.caps b{font-size:15px}
+.caps p{font-size:14px;color:var(--muted);line-height:1.55}
+/* niveles */
+.levels{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.level{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,36px);display:grid;gap:12px;align-content:start;min-width:0}
+.level h3{font-size:clamp(24px,2.8vw,32px);font-weight:800;letter-spacing:-.01em}
+.level__d{font-size:15px;color:var(--muted);line-height:1.6}
+.level ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.level li{position:relative;padding-left:18px;font-size:14px;color:var(--muted)}
+.level li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.level__p{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:10px;padding-top:18px;border-top:1px solid var(--line)}
+.level__p span{font-size:13px;color:var(--label);font-weight:600}
+.level__p b{font-size:clamp(28px,3.4vw,40px);font-weight:800;color:var(--ink)}
+.level--hi{background:var(--hero);border-color:var(--hero);color:#fff}
+.level--hi .tk{color:var(--green-br)}
+.level--hi .level__d,.level--hi li{color:#C3D0E4}
+.level--hi .level__p{border-top-color:rgba(255,255,255,.15)}
+.level--hi .level__p b{color:#fff}
+.level--hi .level__p span{color:#8FA1BC}
+/* mensualidad */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:6px;min-width:0}
+.plan b{font-size:clamp(26px,3vw,34px);font-weight:800}
+.plan__m{font-size:13.5px;color:var(--muted)}
+.plan--on{background:var(--hero);border-color:var(--hero);color:#fff}
+.plan--on .tk{color:var(--green-br)}
+.plan--on .plan__m{color:#C3D0E4}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+table.menu{min-width:0}
+table.menu td{padding:12px 4px;font-size:14px;color:var(--muted)}
+table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
+.tbl-wrap{border:0;border-radius:0}
+/* cronograma */
+.tl{list-style:none;margin:36px 0 0;padding:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tl li{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .d{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--label);padding-top:2px}
+.tl .d.g{color:var(--green)}
+.tl b{font-size:15px}
+.tl p{font-size:14px;color:var(--muted);margin-top:4px}
+.boxes2{display:grid;grid-template-columns:1fr 1.4fr;gap:22px;margin-top:22px}
+@media (max-width:980px){.traits{grid-template-columns:1fr 1fr}.vids,.levels,.menu-grid,.boxes2{grid-template-columns:1fr}}
+@media (max-width:620px){.traits,.plans{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:4px}.cut__bar span{height:72px;font-size:10.5px;padding:6px}.cut__bar.b{width:100%}.cut__ruler{display:none}}
+@media (max-width:620px){.hero__title{font-size:clamp(34px,10vw,44px)}.cut__bar.a{grid-template-columns:repeat(3,minmax(0,1fr))}.cut__bar.b{grid-template-columns:repeat(2,minmax(0,1fr))}.cut__head{flex-wrap:wrap}.hero__date{font-size:12px}}
+/* v2 */
+.vid--one{margin-top:36px}
+.vid--one .caps{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.vid--one .caps li:nth-last-child(2){border-bottom:0}
+.refs{display:grid;gap:36px;margin-top:36px}
+.refs__t{font-size:clamp(20px,2.2vw,26px);font-weight:800;margin-bottom:0}
+.refs__g{grid-template-columns:repeat(3,minmax(0,1fr))}
+.refs__g span{aspect-ratio:9/16;max-height:340px;width:100%}
+.cmp{min-width:460px}
+.cmp th,.cmp td{text-align:right}
+.cmp th:first-child,.cmp td:first-child{text-align:left}
+.cmp td:nth-child(2){color:var(--label);text-decoration:line-through}
+.cmp td:nth-child(3){color:var(--green);font-weight:800}
+.cmp th:nth-child(3){color:var(--green)}
+.months{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.months li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:6px;align-content:start;min-width:0}
+.months b{font-size:17px}
+.months p{font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:980px){.months{grid-template-columns:1fr}}
+@media (max-width:620px){.vid--one .caps{grid-template-columns:1fr}.vid--one .caps li:nth-last-child(2){border-bottom:1px dashed var(--line)}.refs__g{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:12px}.refs__g span{font-size:9px;padding:6px}}
+.planbox{margin-top:36px;background:var(--hero);color:#fff;border-radius:14px;padding:clamp(22px,3vw,32px);display:grid;grid-template-columns:auto 1fr;gap:12px 40px;align-items:center}
+.planbox .tk{color:var(--green-br);display:block;margin-bottom:6px}
+.planbox b{font-size:clamp(30px,4vw,44px);font-weight:800}
+.planbox small{font-size:16px;font-weight:500;color:#9DB0CC}
+.planbox p{font-size:15px;color:#C3D0E4;max-width:44ch}
+.planbox p b{font-size:inherit;color:#fff}
+@media (max-width:620px){.planbox{grid-template-columns:1fr}}
+.vid--other{margin-top:22px}
+.vid__n{font-size:14px;color:var(--muted)}
+.others{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-top:16px}
+.others li{display:grid;gap:4px;align-content:start;min-width:0}
+.others b{font-size:15px}
+.others p{font-size:14px;color:var(--muted);line-height:1.55}
+.refs__t .tk{display:block;margin-bottom:4px}
+@media (max-width:980px){.others{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.others{grid-template-columns:1fr}}
+/* v3: referencias verticales y caminos */
+.refrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:16px}
+.ref{display:grid;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.ref img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;box-shadow:0 18px 36px -24px rgba(24,39,65,.5);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.ref:hover img{transform:translateY(-4px)}
+.ref span{font-size:13px;color:var(--muted);line-height:1.45}
+.ref b{display:block;font-size:14px;color:var(--ink)}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.path{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,36px);display:grid;gap:12px;align-content:start;min-width:0}
+.path h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.01em}
+.path p{font-size:15px;color:var(--muted);line-height:1.6}
+.path ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.path li{position:relative;padding-left:18px;font-size:14px;color:var(--muted)}
+.path li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.path--hi{background:var(--hero);border-color:var(--hero);color:#fff}
+.path--hi .tk{color:var(--green-br)}
+.path--hi p,.path--hi li{color:#C3D0E4}
+.kvbox{margin-top:22px}
+@media (max-width:980px){.refrow{grid-template-columns:repeat(3,minmax(0,1fr))}.paths{grid-template-columns:1fr}}
+@media (max-width:620px){.refrow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* v6: 2 + 2 en una línea */
+.refs{grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,40px)}
+.refrow{grid-template-columns:1fr 1fr}
+@media (max-width:620px){.refs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="aurora"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="hero__inner">
+    <div class="hero__bar">
+      <img class="hero__logo" src="img/logo-samsa.png" alt="Samsa Creative">
+      <span class="hero__date">Cotización para ionava · Octubre 2026</span>
+    </div>
+    <div class="hero__grid">
+      <div>
+        <p class="hero__eyebrow">ionava · Cotización</p>
+        <h1 class="hero__title">Video explicativo <span class="grad">ionava</span></h1>
+        <p class="hero__sub">Video explicativo de 90 segundos sobre el ecosistema ionava, dividido en seis cápsulas de 15 segundos. Dos niveles de estética y dos caminos de trabajo: ejecución o plan de créditos con estrategia.</p>
+        <div class="facts">
+          <div class="fact"><span class="fact__v num">6</span><span class="fact__k">Cápsulas</span></div>
+          <div class="fact"><span class="fact__v num">15 s</span><span class="fact__k">Cada una</span></div>
+          <div class="fact"><span class="fact__v num">9:16</span><span class="fact__k">Formato</span></div>
+        </div>
+      </div>
+      <figure class="cut">
+        <div class="cut__head"><span>Video explicativo · 90 s</span><span>Corte cada 15 s</span></div>
+        <div class="cut__bar a">
+          <span>Cápsula 1</span><span>Cápsula 2</span><span>Cápsula 3</span><span>Cápsula 4</span><span>Cápsula 5</span><span>Cápsula 6</span>
+        </div>
+        <div class="cut__ruler num"><span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>75</span><span>90 s</span></div>
+        <figcaption>Cada cápsula termina la frase en el segundo 15. Separadas van a los highlights de Instagram; unidas forman el video completo.</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section>
+  <a class="reel" href="https://youtu.be/ZSa2pcVe1dU" target="_blank" rel="noopener">
+    <img src="img/ref-reel.jpg" alt="Fotograma del reel de Samsa Creative.">
+    <span class="reel__bar">
+      <span class="reel__l"><b>Reel Samsa Creative</b><span>Animación 2D, 3D, motion y producción con IA.</span></span>
+      <span class="cta">Ver el reel</span>
+    </span>
+  </a>
+</section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel">01 · Alcance</p>
+    <h2 class="bigt">Alcance <span class="grad">de la propuesta</span></h2>
+    <div class="body-lg"><p>Un video explicativo de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se escribe como un solo video y se divide en seis cápsulas de 15 segundos que se ven una detrás de otra.</p></div>
+    <div class="traits">
+      <div class="trait"><span class="tk">Formato</span><h3>6 cápsulas de 15 s</h3><p>90 segundos en total, en vertical 9:16, con la misma línea visual de principio a fin.</p></div>
+      <div class="trait"><span class="tk">Uso</span><h3>Highlights y video completo</h3><p>Cada cápsula funciona sola en los highlights de Instagram. Unidas forman el video de 90 segundos.</p></div>
+      <div class="trait"><span class="tk">Idioma</span><h3>Locución en inglés</h3><p>Como el sitio de ionava.</p></div>
+      <div class="trait"><span class="tk">Producción</span><h3>Con IA</h3><p>El volumen sale con herramientas de IA. Cada pieza pasa por el equipo de dirección de arte de Samsa.</p></div>
+    </div>
+    <p class="quote">En el segundo 15 siempre hay corte y la frase termina, así cada cápsula se separa sin editar.</p>
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wide">
+    <p class="seclabel">02 · Contenido</p>
+    <h2 class="bigt">Posibles temas <span class="grad">de cápsula</span></h2>
+    <div class="body-lg"><p>Propuesta inicial a partir del sitio de ionava. Se define en el guion.</p></div>
+    <div class="vid vid--one">
+      <ol class="caps">
+        <li><b>Qué es ionava</b><p>No es un seguro: es un sistema que te prepara financieramente y te premia por estar sano.</p></li>
+        <li><b>La Vault</b><p>Efectivo reservado de $300k, $700k o $1M para los grandes imprevistos de salud.</p></li>
+        <li><b>La Wallet</b><p>El 70% de la suscripción vuelve a ti, genera intereses y paga consultas, laboratorios, fitness y prevención.</p></li>
+        <li><b>El Health Score</b><p>Qué mide y por qué estar más sano hace crecer tu Wallet.</p></li>
+        <li><b>Cómo se accede</b><p>Health Score gratis, eliges tu Vault y el precio queda fijo de por vida.</p></li>
+        <li><b>Junto a tu plan actual</b><p>ionava se suma al plan que ya tienes, no lo reemplaza.</p></li>
+      </ol>
+    </div>
+    <div class="vid vid--other">
+      <div class="vid__h"><span class="tk">Otros temas</span><h3>Por qué ionava es mejor que un seguro tradicional</h3><p class="vid__n">Otra narrativa con la misma estética, para un siguiente video.</p></div>
+      <ul class="others">
+        <li><b>Seguro de enfermedad</b><p>El seguro tradicional cuesta mucho y da poco cuando estás sano.</p></li>
+        <li><b>La mitad del costo</b><p>Precio fijo de por vida y se cancela cuando quieras.</p></li>
+        <li><b>Te premia por estar sano</b><p>Un plan tradicional cobra de más mientras más sano estás. ionava funciona al revés.</p></li>
+        <li><b>Respaldo</b><p>Modelo validado por Milliman. El dinero de la Wallet es tuyo.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel">03 · Referencias</p>
+    <h2 class="bigt">Referencias <span class="grad">de estética</span></h2>
+    <div class="body-lg"><p>Dos referencias por nivel, de seguros, salud y finanzas, recortadas en vertical para ver cómo funcionan en 9:16.</p></div>
+    <div class="refs">
+      <div><h3 class="refs__t"><span class="tk">Nivel 1</span>Motion graphics con IA</h3>
+        <div class="refrow">
+          <a class="ref" href="https://wearefevr.com/risk-ai-kinetic-typography" target="_blank" rel="noopener"><img src="img/ref-r15k.jpg" alt="Fotograma vertical del video de R15K AI: gráficos de barras y tipografía en azul sobre negro."><span><b>R15K AI · FEVR</b>Tipografía en movimiento y gráficos para una fintech.</span></a>
+          <a class="ref" href="https://youtu.be/ZSa2pcVe1dU" target="_blank" rel="noopener"><img src="img/ref-samsa-motion.jpg" alt="Fotograma vertical de una pieza de motion de Samsa: pantallas que salen de un portátil sobre fondo azul."><span><b>Samsa Creative</b>Motion con pantallas e interfaz en 3D.</span></a>
+        </div></div>
+      <div><h3 class="refs__t"><span class="tk">Nivel 2</span>Premium con IA</h3>
+        <div class="refrow">
+          <a class="ref" href="https://nexusstudios.com/work/lemonade-insurance/" target="_blank" rel="noopener"><img src="img/ref-lemonade-2.jpg" alt="Fotograma vertical de la campaña de Lemonade: ciudad de edificios sobre nubes rosadas."><span><b>Lemonade · Nexus Studios</b>Mundo propio para explicar el producto.</span></a>
+          <a class="ref" href="https://shots.net/news/view/in-a-world-full-of-fakes-ritual-gets-real-with-ai" target="_blank" rel="noopener"><img src="img/ref-ritual-1.jpg" alt="Fotograma vertical de la campaña de Ritual hecha con IA: una madre con dos bebés en una cocina."><span><b>Ritual · Giant Spoon</b>Bienestar. Personajes y escenas hechos con Veo.</span></a>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wide">
+    <p class="seclabel">04 · Caminos</p>
+    <h2 class="bigt">Dos caminos <span class="grad">de trabajo</span></h2>
+    <div class="paths">
+      <article class="path">
+        <span class="tk">Camino A</span>
+        <h3>Ejecución</h3>
+        <p>ionava entrega los guiones y Samsa produce las cápsulas en el nivel de estética elegido y en los tiempos que se definan.</p>
+        <ul>
+          <li>Precio por video, según el nivel.</li>
+          <li>Si ionava no tiene key visual ni guía de uso de marca, el levantamiento visual se cotiza aparte.</li>
+        </ul>
+      </article>
+      <article class="path path--hi">
+        <span class="tk">Camino B</span>
+        <h3>Plan de créditos con estrategia</h3>
+        <p>Samsa hace la estrategia, el key visual y la producción mensual, con mínimo 3 meses.</p>
+        <ul>
+          <li>Estrategia: qué decir, en qué canales, con qué duración y qué probar cada mes.</li>
+          <li>Key visual y uso de la marca en video.</li>
+          <li>Producción mensual con 20% de descuento por pieza.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="quote">Una cápsula de 15 segundos funciona para quien ya conoce ionava. Para explicar un tema como la Vault o la Wallet, un explicativo de 30 segundos puede funcionar mejor. Esto se define en la estrategia.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel">05 · Camino A</p>
+    <h2 class="bigt">Ejecución <span class="grad">por nivel de estética</span></h2>
+    <div class="body-lg"><p>Los dos niveles incluyen las 6 cápsulas, el video completo de 90 segundos, locución en inglés con voz IA, música, sonido y dos rondas de ajustes.</p></div>
+    <div class="levels">
+      <article class="level">
+        <span class="tk">Nivel 1</span>
+        <h3>Motion graphics con IA</h3>
+        <p class="level__d">Tipografía en movimiento, íconos y pantallas de la app, en la paleta de ionava.</p>
+        <ul>
+          <li>Guion del video dividido en cápsulas, a partir del guion de ionava.</li>
+          <li>Set de íconos a partir de la marca ionava.</li>
+          <li>6 cápsulas animadas en 9:16 y video completo.</li>
+        </ul>
+        <div class="level__p"><span>3 semanas</span><b class="num">USD 2.500</b></div>
+      </article>
+      <article class="level level--hi">
+        <span class="tk">Nivel 2</span>
+        <h3>Premium con IA</h3>
+        <p class="level__d">Escenas, personajes e imágenes generadas con IA, la Vault en 3D y motion graphics encima.</p>
+        <ul>
+          <li>Guion visual escena por escena: locución, imagen y texto en pantalla.</li>
+          <li>Diseño de personajes y de la Vault.</li>
+          <li>6 cápsulas en 9:16 y video completo.</li>
+        </ul>
+        <div class="level__p"><span>4 semanas</span><b class="num">USD 3.500</b></div>
+      </article>
+    </div>
+    <div class="box kvbox"><span class="k">Key visual</span><ul><li>Si ionava no tiene key visual ni guía de uso de marca en video, se hace antes de producir. <b>Valor por definir.</b></li></ul></div>
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wide">
+    <p class="seclabel">06 · Camino B</p>
+    <h2 class="bigt">Plan de créditos <span class="grad">mínimo 3 meses</span></h2>
+    <div class="body-lg"><p>Incluye estrategia y key visual. Cada pieza tiene 20% de descuento sobre el precio del camino A y el monto de cada mes se usa en las piezas que definamos juntos: cápsulas, imágenes o versiones para probar.</p></div>
+    <div class="planbox">
+      <div><span class="tk">Plan de créditos · mínimo 3 meses</span><b class="num">USD 2.000 <small>/ mes</small></b></div>
+      <p>Con USD 2.000 al mes, el video explicativo en motion graphics con IA sale <b class="num">USD 500</b> más barato que en el camino A.</p>
+    </div>
+    <div class="tbl-wrap"><table class="cmp">
+      <thead><tr><th></th><th>Camino A</th><th>Camino B · plan</th></tr></thead>
+      <tbody>
+        <tr><td>Cápsula de 15 s · motion graphics con IA</td><td>USD 417</td><td>USD 333</td></tr>
+        <tr><td>Cápsula de 15 s · premium con IA</td><td>USD 583</td><td>USD 467</td></tr>
+        <tr><td>Video explicativo · motion graphics con IA</td><td>USD 2.500</td><td>USD 2.000</td></tr>
+        <tr><td>Video explicativo · premium con IA</td><td>USD 3.500</td><td>USD 2.800</td></tr>
+      </tbody>
+    </table></div>
+    <ol class="months">
+      <li><span class="tk">Mes 1</span><b>Estrategia, key visual y video explicativo</b><p>Definimos mensajes, canales y duraciones, y producimos el primer video.</p></li>
+      <li><span class="tk">Mes 2</span><b>Segundo video y piezas</b><p>Por qué ionava es mejor que un seguro tradicional, con la misma estética, más imágenes para redes.</p></li>
+      <li><span class="tk">Mes 3</span><b>Lo que mejor funcione</b><p>Nuevas cápsulas y versiones según los resultados de los dos primeros meses.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="seclabel">07 · Cronograma</p>
+    <h2 class="bigt">Cronograma <span class="grad">del video explicativo</span></h2>
+    <ol class="tl">
+      <li><span class="d">Semana 1</span><div><b>Arranque</b><p>Revisamos contigo los temas de cada cápsula y el tono.</p></div></li>
+      <li><span class="d g">Semana 1</span><div><b>Guion y propuesta de arte</b><p>Guion de las 6 cápsulas y primeros frames de estilo.</p></div></li>
+      <li><span class="d g">Semana 2</span><div><b>Producción</b><p>Primeras 2 cápsulas para validar estilo y ritmo, después las 4 restantes.</p></div></li>
+      <li><span class="d g">Semana 3 o 4</span><div><b>Ajustes y entrega final</b><p>6 cápsulas y video completo. Semana 3 en motion graphics con IA, semana 4 en premium con IA.</p></div></li>
+    </ol>
+    <div class="boxes2">
+      <div class="box"><span class="k">Incluye</span><ul>
+        <li>Guion de las cápsulas.</li>
+        <li>6 cápsulas de 15 s en 9:16 y video completo de 90 s.</li>
+        <li>Locución en inglés con voz IA, música y sonido.</li>
+        <li>Dos rondas de ajustes.</li></ul></div>
+      <div class="box"><span class="k">Condiciones</span><ul>
+        <li>Valores en dólares (USD).</li>
+        <li>Camino A: 50% al aprobar y 50% en la entrega final.</li>
+        <li>Camino B: mínimo 3 meses, pago al inicio de cada mes.</li>
+        <li>Vigencia de la propuesta: 15 días.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="marcas">
+  <div class="wide"><p class="k">Marcas con las que trabajamos</p><img src="img/marcas.png" alt="Logos de marcas clientes de Samsa: Natura, Puma, Sanofi, Samsung, New Balance y otras."></div>
+</section>
+
+<footer class="close">
+  <div class="aurora"><span class="blob b1"></span><span class="blob b2"></span></div>
+  <div class="wide inner">
+    <p class="hero__eyebrow">Siguiente paso</p>
+    <h2 class="bigt">Aprobación <span class="grad">y arranque</span></h2>
+    <div class="body-lg" style="color:#C3D0E4"><p>Con la aprobación del nivel de estética y la modalidad agendamos el arranque y empezamos el guion.</p></div>
+    <div class="contact">
+      <div><span>Email</span><b>ana@samsa.studio</b></div>
+      <div><span>Web</span><b><a href="https://samsa.studio" target="_blank" rel="noopener">samsa.studio</a></b></div>
+    </div>
+    <div class="foot"><img src="img/logo-samsa.png" alt="Samsa Creative"><span>ionava · Video explicativo · 2026</span></div>
+  </div>
+</footer>
+</body>
+</html>
