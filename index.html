@@ -348,6 +348,10 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .refs{grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,40px)}
 .refrow{grid-template-columns:1fr 1fr}
 @media (max-width:620px){.refs{grid-template-columns:1fr}}
+/* v7: recomendación antes de los caminos */
+.reco{margin-top:36px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--green-br);border-radius:14px;padding:22px 26px;display:grid;gap:6px;}
+.reco p{font-size:16px;color:var(--ink);line-height:1.6;font-weight:500}
+.paths{margin-top:22px}
 </style>
 </head>
 <body>
@@ -375,7 +379,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
           <span>Cápsula 1</span><span>Cápsula 2</span><span>Cápsula 3</span><span>Cápsula 4</span><span>Cápsula 5</span><span>Cápsula 6</span>
         </div>
         <div class="cut__ruler num"><span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>75</span><span>90 s</span></div>
-        <figcaption>Cada cápsula termina la frase en el segundo 15. Separadas van a los highlights de Instagram; unidas forman el video completo.</figcaption>
+        <figcaption>Separadas van a los highlights de Instagram; unidas forman el video completo.</figcaption>
       </figure>
     </div>
   </div>
@@ -395,14 +399,13 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">01 · Alcance</p>
     <h2 class="bigt">Alcance <span class="grad">de la propuesta</span></h2>
-    <div class="body-lg"><p>Un video explicativo de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se escribe como un solo video y se divide en seis cápsulas de 15 segundos que se ven una detrás de otra.</p></div>
+    <div class="body-lg"><p>Un video de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se divide en seis cápsulas de 15 segundos que se ven una detrás de otra.</p></div>
     <div class="traits">
       <div class="trait"><span class="tk">Formato</span><h3>6 cápsulas de 15 s</h3><p>90 segundos en total, en vertical 9:16, con la misma línea visual de principio a fin.</p></div>
       <div class="trait"><span class="tk">Uso</span><h3>Highlights y video completo</h3><p>Cada cápsula funciona sola en los highlights de Instagram. Unidas forman el video de 90 segundos.</p></div>
       <div class="trait"><span class="tk">Idioma</span><h3>Locución en inglés</h3><p>Como el sitio de ionava.</p></div>
       <div class="trait"><span class="tk">Producción</span><h3>Con IA</h3><p>El volumen sale con herramientas de IA. Cada pieza pasa por el equipo de dirección de arte de Samsa.</p></div>
     </div>
-    <p class="quote">En el segundo 15 siempre hay corte y la frase termina, así cada cápsula se separa sin editar.</p>
   </div>
 </section>
 
@@ -455,36 +458,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 
 <section class="block block--tint">
   <div class="wide">
-    <p class="seclabel">04 · Caminos</p>
-    <h2 class="bigt">Dos caminos <span class="grad">de trabajo</span></h2>
-    <div class="paths">
-      <article class="path">
-        <span class="tk">Camino A</span>
-        <h3>Ejecución</h3>
-        <p>ionava entrega los guiones y Samsa produce las cápsulas en el nivel de estética elegido y en los tiempos que se definan.</p>
-        <ul>
-          <li>Precio por video, según el nivel.</li>
-          <li>Si ionava no tiene key visual ni guía de uso de marca, el levantamiento visual se cotiza aparte.</li>
-        </ul>
-      </article>
-      <article class="path path--hi">
-        <span class="tk">Camino B</span>
-        <h3>Plan de créditos con estrategia</h3>
-        <p>Samsa hace la estrategia, el key visual y la producción mensual, con mínimo 3 meses.</p>
-        <ul>
-          <li>Estrategia: qué decir, en qué canales, con qué duración y qué probar cada mes.</li>
-          <li>Key visual y uso de la marca en video.</li>
-          <li>Producción mensual con 20% de descuento por pieza.</li>
-        </ul>
-      </article>
-    </div>
-    <p class="quote">Una cápsula de 15 segundos funciona para quien ya conoce ionava. Para explicar un tema como la Vault o la Wallet, un explicativo de 30 segundos puede funcionar mejor. Esto se define en la estrategia.</p>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wide">
-    <p class="seclabel">05 · Camino A</p>
+    <p class="seclabel">04 · Niveles de estética</p>
     <h2 class="bigt">Ejecución <span class="grad">por nivel de estética</span></h2>
     <div class="body-lg"><p>Los dos niveles incluyen las 6 cápsulas, el video completo de 90 segundos, locución en inglés con voz IA, música, sonido y dos rondas de ajustes.</p></div>
     <div class="levels">
@@ -493,7 +467,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <h3>Motion graphics con IA</h3>
         <p class="level__d">Tipografía en movimiento, íconos y pantallas de la app, en la paleta de ionava.</p>
         <ul>
-          <li>Guion del video dividido en cápsulas, a partir del guion de ionava.</li>
+          <li>Guion del video dividido en cápsulas.</li>
           <li>Set de íconos a partir de la marca ionava.</li>
           <li>6 cápsulas animadas en 9:16 y video completo.</li>
         </ul>
@@ -512,6 +486,36 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       </article>
     </div>
     <div class="box kvbox"><span class="k">Key visual</span><ul><li>Si ionava no tiene key visual ni guía de uso de marca en video, se hace antes de producir. <b>Valor por definir.</b></li></ul></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel">05 · Caminos</p>
+    <h2 class="bigt">Dos caminos <span class="grad">de trabajo</span></h2>
+    <div class="reco"><span class="tk">Recomendación</span><p>Para un video explicativo, 15 segundos puede llegar a ser un tiempo corto para explicar temas complejos. Por eso recomendamos sumar un plan con estrategia para definir duraciones, mensajes y los canales de cada pieza.</p></div>
+    <div class="paths">
+      <article class="path">
+        <span class="tk">Camino A</span>
+        <h3>Ejecución</h3>
+        <p>Samsa hace los guiones y produce las cápsulas de 15 segundos en el nivel de estética elegido, con los precios definidos.</p>
+        <ul>
+          <li>Precio por video según el nivel: USD 2.500 o USD 3.500.</li>
+          <li>Si ionava no tiene key visual ni guía de uso de marca, el levantamiento visual se cotiza aparte.</li>
+        </ul>
+      </article>
+      <article class="path path--hi">
+        <span class="tk">Camino B · Recomendado</span>
+        <h3>Plan de créditos con estrategia</h3>
+        <p>Mínimo 3 meses.</p>
+        <ul>
+          <li>Key visual.</li>
+          <li>Producción de los contenidos.</li>
+          <li>Estrategia: qué decir, en qué canales, con qué duración y qué probar cada mes.</li>
+          <li>Descuento de hasta 20% por pieza.</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
