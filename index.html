@@ -354,6 +354,18 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .paths{margin-top:22px}
 .ref{margin:0}
 .ref video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;box-shadow:0 18px 36px -24px rgba(24,39,65,.5);background:#0B1340;display:block}
+/* v8: explicación por nivel y entregables */
+.refs__d{font-size:14.5px;color:var(--muted);line-height:1.55;margin-top:8px;max-width:52ch}
+.incl{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.incl li{background:#fff;padding:26px 26px 28px;display:grid;gap:6px;align-content:start;min-width:0}
+.incl b{font-size:clamp(18px,1.8vw,22px);font-weight:800;color:var(--ink)}
+.incl b::before{content:"";display:block;width:28px;height:4px;border-radius:2px;margin-bottom:14px;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.incl span{font-size:14.5px;color:var(--muted);line-height:1.5}
+.boxcond{margin-top:22px}
+.boxcond ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+@media (max-width:980px){.incl{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.incl,.boxcond ul{grid-template-columns:1fr}}
+.level{display:flex;flex-direction:column}.level__p{margin-top:auto;padding-top:18px}.level ul{margin-bottom:18px}
 </style>
 </head>
 <body>
@@ -442,17 +454,17 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">03 · Referencias</p>
     <h2 class="bigt">Referencias <span class="grad">de estética</span></h2>
-    <div class="body-lg"><p>Trabajos de Samsa en vertical, dos por cada nivel, incluido un ejemplo hecho para ionava. La diferencia entre los dos niveles es la generación de imágenes y videos con IA.</p></div>
+    <div class="body-lg"><p>Trabajos de Samsa en vertical, dos por nivel, incluido un ejemplo hecho para ionava.</p></div>
     <div class="refs">
-      <div><h3 class="refs__t"><span class="tk">Nivel 1</span>Motion graphics con IA</h3>
+      <div><h3 class="refs__t"><span class="tk">Nivel 1</span>Motion graphics con IA entrenada</h3><p class="refs__d">La IA se entrena con la marca: key visual, mensajes y dinámica de ionava. Se mezcla con generación de imágenes y con motion graphics específicos.</p>
         <div class="refrow">
-          <figure class="ref"><img src="img/ref-nivel1-a.jpg" alt="Fotograma vertical de Natura Invita y Gana con Nequi: celular con el saldo de la cuenta y el texto Pagos inmediatos y directos."><span><b>Natura · Invita y Gana + Nequi</b>Pantallas de app, saldo y mensajes animados.</span></figure>
+          <figure class="ref"><video src="img/ref-nivel1-a.mp4" poster="img/ref-nivel1-a.jpg" autoplay muted loop playsinline aria-label="Clip vertical de Natura Invita y Gana con Nequi: celular con el saldo de la cuenta y el texto Pagos inmediatos y directos."></video><span><b>Natura · Invita y Gana + Nequi</b>Pantallas de app, saldo y mensajes animados.</span></figure>
           <figure class="ref"><video src="img/ejemplo-ionava-wallet.mp4" poster="img/ejemplo-ionava-wallet.jpg" autoplay muted loop playsinline aria-label="Ejemplo de cápsula de 15 segundos para ionava sobre la Wallet, en motion graphics."></video><span><b>Ejemplo para ionava · Samsa</b>Cápsula de 15 s sobre la Wallet, hecha para esta propuesta.</span></figure>
         </div></div>
-      <div><h3 class="refs__t"><span class="tk">Nivel 2</span>Premium con IA</h3>
+      <div><h3 class="refs__t"><span class="tk">Nivel 2</span>Premium con IA generativa</h3><p class="refs__d">La IA generativa crea imágenes, ilustraciones y videos: escenas, productos y personajes propios de ionava.</p>
         <div class="refrow">
-          <figure class="ref"><img src="img/ref-nivel2-a.jpg" alt="Fotograma vertical de Natura Referidos: una mano toma un cargador portátil sobre una bandeja de madera, escena generada con IA."><span><b>Natura · Referidos</b>Escenas de producto generadas con IA.</span></figure>
-          <figure class="ref"><img src="img/ref-nivel2-b.jpg" alt="Fotograma vertical de Louisville Ladder: dos hombres usando una escalera multipropósito en un garaje, escena generada con IA, con el rótulo Twin (Trestle) Ladder."><span><b>Louisville Ladder · Hero video</b>Escenas de uso del producto generadas con IA.</span></figure>
+          <figure class="ref"><video src="img/ref-nivel2-a.mp4" poster="img/ref-nivel2-a.jpg" autoplay muted loop playsinline aria-label="Clip vertical de Natura Referidos: una mano toma un cargador portátil sobre una bandeja de madera, escena generada con IA."></video><span><b>Natura · Referidos</b>Escenas de producto generadas con IA.</span></figure>
+          <figure class="ref"><video src="img/ref-nivel2-b.mp4" poster="img/ref-nivel2-b.jpg" autoplay muted loop playsinline aria-label="Clip vertical de Louisville Ladder: dos hombres usando una escalera multipropósito en un garaje, escena generada con IA, con el rótulo Twin (Trestle) Ladder."></video><span><b>Louisville Ladder · Hero video</b>Escenas de uso del producto generadas con IA.</span></figure>
         </div></div>
     </div>
   </div>
@@ -460,34 +472,33 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 
 <section class="block block--tint">
   <div class="wide">
-    <p class="seclabel">04 · Niveles de estética</p>
-    <h2 class="bigt">Ejecución <span class="grad">por nivel de estética</span></h2>
-    <div class="body-lg"><p>Los dos niveles incluyen las 6 cápsulas, el video completo de 90 segundos, locución en inglés con voz IA, música, sonido y dos rondas de ajustes. La diferencia está en la generación de imágenes y videos con IA: el Nivel 1 anima gráficos, íconos y pantallas; el Nivel 2 suma escenas, productos y personajes generados con IA.</p></div>
+    <p class="seclabel">04 · Costos</p>
+    <h2 class="bigt">Costo <span class="grad">por nivel de estética</span></h2>
+    <div class="body-lg"><p>Los dos niveles incluyen key visual, las 6 cápsulas, el video completo, locución en inglés con voz IA, música, efectos de sonido y dos rondas de ajustes. Los costos aplican a los dos caminos de trabajo.</p></div>
     <div class="levels">
       <article class="level">
         <span class="tk">Nivel 1</span>
-        <h3>Motion graphics con IA</h3>
-        <p class="level__d">Tipografía en movimiento, íconos y pantallas de la app, en la paleta de ionava.</p>
+        <h3>Motion graphics con IA entrenada</h3>
+        <p class="level__d">IA entrenada con la marca ionava, mezclada con motion graphics: tipografía en movimiento, íconos y pantallas de la app.</p>
         <ul>
+          <li>Key visual a partir de la marca ionava.</li>
           <li>Guion del video dividido en cápsulas.</li>
-          <li>Set de íconos a partir de la marca ionava.</li>
-          <li>6 cápsulas animadas en 9:16 y video completo.</li>
+          <li>6 cápsulas y video completo.</li>
         </ul>
-        <div class="level__p"><span>3 semanas</span><b class="num">USD 2.500</b></div>
+        <div class="level__p"><span>2 a 3 semanas</span><b class="num">USD 2.500</b></div>
       </article>
       <article class="level level--hi">
         <span class="tk">Nivel 2</span>
-        <h3>Premium con IA</h3>
-        <p class="level__d">Escenas, personajes e imágenes generadas con IA, la Vault en 3D y motion graphics encima.</p>
+        <h3>Premium con IA generativa</h3>
+        <p class="level__d">Imágenes, ilustraciones y videos generados con IA: escenas, personajes y la Vault, con motion graphics encima.</p>
         <ul>
+          <li>Key visual a partir de la marca ionava.</li>
           <li>Guion visual escena por escena: locución, imagen y texto en pantalla.</li>
-          <li>Diseño de personajes y de la Vault.</li>
-          <li>6 cápsulas en 9:16 y video completo.</li>
+          <li>6 cápsulas y video completo.</li>
         </ul>
-        <div class="level__p"><span>4 semanas</span><b class="num">USD 3.500</b></div>
+        <div class="level__p"><span>2 a 3 semanas</span><b class="num">USD 3.200</b></div>
       </article>
     </div>
-    <div class="box kvbox"><span class="k">Key visual</span><ul><li>Si ionava no tiene key visual ni guía de uso de marca en video, se hace antes de producir. <b>Valor por definir.</b></li></ul></div>
   </div>
 </section>
 
@@ -499,11 +510,11 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     <div class="paths">
       <article class="path">
         <span class="tk">Camino A</span>
-        <h3>Ejecución</h3>
-        <p>Samsa hace los guiones y produce las cápsulas de 15 segundos en el nivel de estética elegido, con los precios definidos.</p>
+        <h3>Por pedido</h3>
+        <p>Samsa hace los guiones y produce las cápsulas en el nivel de estética elegido, con los costos de la sección anterior.</p>
         <ul>
-          <li>Precio por video según el nivel: USD 2.500 o USD 3.500.</li>
-          <li>Si ionava no tiene key visual ni guía de uso de marca, el levantamiento visual se cotiza aparte.</li>
+          <li>Precio por video: USD 2.500 o USD 3.200, según el nivel.</li>
+          <li>Incluye key visual.</li>
         </ul>
       </article>
       <article class="path path--hi">
@@ -528,15 +539,15 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     <div class="body-lg"><p>Incluye estrategia y key visual. Cada pieza tiene 20% de descuento sobre el precio del camino A y el monto de cada mes se usa en las piezas que definamos juntos: cápsulas, imágenes o versiones para probar.</p></div>
     <div class="planbox">
       <div><span class="tk">Plan de créditos · mínimo 3 meses</span><b class="num">USD 2.000 <small>/ mes</small></b></div>
-      <p>Con USD 2.000 al mes, el video explicativo en motion graphics con IA sale <b class="num">USD 500</b> más barato que en el camino A.</p>
+      <p>Ejemplo con el Nivel 1 · Motion graphics con IA entrenada: el video completo cuesta USD 2.500 por pedido y <b class="num">USD 2.000</b> con el plan.</p>
     </div>
     <div class="tbl-wrap"><table class="cmp">
-      <thead><tr><th></th><th>Camino A</th><th>Camino B · plan</th></tr></thead>
+      <thead><tr><th></th><th>Camino A · por pedido</th><th>Camino B · plan</th></tr></thead>
       <tbody>
-        <tr><td>Cápsula de 15 s · motion graphics con IA</td><td>USD 417</td><td>USD 333</td></tr>
-        <tr><td>Cápsula de 15 s · premium con IA</td><td>USD 583</td><td>USD 467</td></tr>
-        <tr><td>Video explicativo · motion graphics con IA</td><td>USD 2.500</td><td>USD 2.000</td></tr>
-        <tr><td>Video explicativo · premium con IA</td><td>USD 3.500</td><td>USD 2.800</td></tr>
+        <tr><td>Cápsula · Nivel 1 · Motion graphics con IA entrenada</td><td>USD 417</td><td>USD 333</td></tr>
+        <tr><td>Cápsula · Nivel 2 · Premium con IA generativa</td><td>USD 533</td><td>USD 427</td></tr>
+        <tr><td>Video completo · Nivel 1 · Motion graphics con IA entrenada</td><td>USD 2.500</td><td>USD 2.000</td></tr>
+        <tr><td>Video completo · Nivel 2 · Premium con IA generativa</td><td>USD 3.200</td><td>USD 2.560</td></tr>
       </tbody>
     </table></div>
     <ol class="months">
@@ -548,27 +559,25 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 </section>
 
 <section class="block">
-  <div class="wrap">
-    <p class="seclabel">07 · Cronograma</p>
-    <h2 class="bigt">Cronograma <span class="grad">del video explicativo</span></h2>
-    <ol class="tl">
-      <li><span class="d">Semana 1</span><div><b>Arranque</b><p>Revisamos contigo los temas de cada cápsula y el tono.</p></div></li>
-      <li><span class="d g">Semana 1</span><div><b>Guion y propuesta de arte</b><p>Guion de las 6 cápsulas y primeros frames de estilo.</p></div></li>
-      <li><span class="d g">Semana 2</span><div><b>Producción</b><p>Primeras 2 cápsulas para validar estilo y ritmo, después las 4 restantes.</p></div></li>
-      <li><span class="d g">Semana 3 o 4</span><div><b>Ajustes y entrega final</b><p>6 cápsulas y video completo. Semana 3 en motion graphics con IA, semana 4 en premium con IA.</p></div></li>
-    </ol>
-    <div class="boxes2">
-      <div class="box"><span class="k">Incluye</span><ul>
-        <li>Guion de las cápsulas.</li>
-        <li>6 cápsulas de 15 s en 9:16 y video completo de 90 s.</li>
-        <li>Locución en inglés con voz IA, música y sonido.</li>
-        <li>Dos rondas de ajustes.</li></ul></div>
-      <div class="box"><span class="k">Condiciones</span><ul>
-        <li>Valores en dólares (USD).</li>
-        <li>Camino A: 50% al aprobar y 50% en la entrega final.</li>
-        <li>Camino B: mínimo 3 meses, pago al inicio de cada mes.</li>
-        <li>Vigencia de la propuesta: 15 días.</li></ul></div>
-    </div>
+  <div class="wide">
+    <p class="seclabel">07 · Entregables</p>
+    <h2 class="bigt">Lo que <span class="grad">incluye</span></h2>
+    <ul class="incl">
+      <li><b>Key visual</b><span>A partir de la marca ionava.</span></li>
+      <li><b>Guion</b><span>Del video completo, dividido en cápsulas.</span></li>
+      <li><b>6 cápsulas</b><span>Exportadas de forma independiente.</span></li>
+      <li><b>Video completo vertical</b><span>9:16, para stories, reels y highlights.</span></li>
+      <li><b>Video completo cuadrado</b><span>1:1, para el feed.</span></li>
+      <li><b>Locución con IA</b><span>En inglés.</span></li>
+      <li><b>Música</b><span>De librería, con licencia.</span></li>
+      <li><b>Efectos de sonido</b><span>Diseño y mezcla de sonido.</span></li>
+      <li><b>Dos rondas de ajustes</b><span>Sobre el video completo.</span></li>
+    </ul>
+    <div class="box boxcond"><span class="k">Condiciones</span><ul>
+      <li>Valores en dólares (USD).</li>
+      <li>Camino A: 50% al aprobar y 50% en la entrega final.</li>
+      <li>Camino B: mínimo 3 meses, pago al inicio de cada mes.</li>
+      <li>Vigencia de la propuesta: 15 días.</li></ul></div>
   </div>
 </section>
 
