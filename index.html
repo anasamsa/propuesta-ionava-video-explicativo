@@ -431,6 +431,19 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .brief dd{margin:0;font-size:14.5px;color:var(--ink)}
 @media (max-width:980px){.how,.team2{grid-template-columns:1fr 1fr}.calc2,.credit{grid-template-columns:1fr}.sum{position:static}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}.brief dl{grid-template-columns:1fr}}
 @media (max-width:620px){.how,.team2{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.item{grid-template-columns:minmax(0,1fr) auto}.item__cr{grid-row:2}.brief dl div{grid-template-columns:1fr;gap:2px}}
+.sum__inc{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+.sum__inc span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-br);font-weight:700}
+.sum__inc ul{margin:8px 0 0;padding-left:18px;display:grid;gap:4px}
+.sum__inc li{font-size:13px;color:#C3D0E4;line-height:1.45}
+.same .tk{color:var(--green-br);display:block;margin-bottom:12px}
+.same__g{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.same__g>div{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 18px;display:grid;gap:4px;align-content:start}
+.same__g>div.on{border-color:var(--green-br);background:rgba(57,194,94,.08)}
+.same__g b{font-size:13px;color:#9DB0CC;font-weight:700}
+.same__g .num{font-size:24px;font-weight:800;color:#fff}
+.same__g .on .num{color:var(--green-br)}
+.same__g p{font-size:13.5px;color:#C3D0E4;line-height:1.5}
+@media (max-width:620px){.same__g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -628,7 +641,13 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     </ol>
     <div class="credit">
       <div><span class="tk">Precio del crédito</span><div class="credit__row"><span>Por pedido</span><b class="num">USD 100</b></div><div class="credit__row on"><span>Con el plan</span><b class="num">USD 80</b></div></div>
-      <p>Ejemplo: el video explicativo en Nivel 1 son 25 créditos. Por pedido son USD 2.500; con el plan, USD 2.000. Los USD 500 de diferencia son el 20%.</p>
+      <div class="same">
+        <span class="tk">El mismo video explicativo · Nivel 1 · 25 créditos</span>
+        <div class="same__g">
+          <div><b>Camino A · Por pedido</b><span class="num">USD 2.500</span><p>Key visual, guion, 6 cápsulas, video completo vertical y horizontal, locución, música, efectos y dos rondas de ajustes.</p></div>
+          <div class="on"><b>Camino B · Plan</b><span class="num">USD 2.000 / mes</span><p>Todo lo anterior, más la estrategia del mes, el project manager y la lectura de resultados para el mes siguiente.</p></div>
+        </div>
+      </div>
     </div>
 
     <h3 class="subt">Calculadora de créditos</h3>
@@ -642,6 +661,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <div class="sum__row big"><span>Con el plan</span><b class="num" id="c-plan">USD 2.400</b></div>
         <div class="sum__row"><span>Ahorro</span><b class="num ok" id="c-ah">USD 600</b></div>
         <p class="sum__note" id="c-note">Supera el mínimo de 25 créditos: los 5 créditos extra se pagan a USD 80.</p>
+        <div class="sum__inc"><span>Incluido en el plan, sin créditos</span><ul><li>Estrategia del mes: mensajes, canales y duraciones</li><li>Project manager y reunión de cierre de mes</li><li>Lectura de resultados para el mes siguiente</li></ul></div>
         <button type="button" class="reset" id="c-reset">Volver al ejemplo</button>
       </aside>
     </div>
@@ -714,8 +734,8 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 <script>
 (function(){
   var M=[
-    ["Video","Video explicativo completo · Nivel 1",25,"Key visual, guion, 6 cápsulas, locución, música y efectos."],
-    ["Video","Video explicativo completo · Nivel 2",34,"Lo mismo, con imágenes y video generados con IA."],
+    ["Video","Video explicativo completo · Nivel 1",25,"Key visual, guion, 6 cápsulas exportadas, video completo vertical y horizontal, locución, música y efectos."],
+    ["Video","Video explicativo completo · Nivel 2",34,"Lo mismo que el Nivel 1, con imágenes y video generados con IA."],
     ["Video","Cápsula animada hasta 20 s · Nivel 1",3,"Motion graphics sobre el key visual."],
     ["Video","Cápsula hasta 20 s · Nivel 2",5,"Con planos generados con IA."],
     ["Video","Video con IA hasta 8 planos",10,"Avatares o personajes, transiciones y efectos de sonido."],
