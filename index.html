@@ -368,6 +368,69 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .level{display:flex;flex-direction:column}.level__p{margin-top:auto;padding-top:18px}.level ul{margin-bottom:18px}
 
 .boxes2--incl{margin-top:36px}
+/* v9: sistema de créditos, equipo, flujo */
+.pend{margin-top:16px;border:2px dashed var(--line);border-radius:12px;padding:16px 18px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.pend b{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#C77700}
+.how{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.how li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:8px;align-content:start;min-width:0}
+.how__n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#0E1B34;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.how b{font-size:18px;line-height:1.3}
+.how p{font-size:14.5px;color:var(--muted);line-height:1.55}
+.credit{margin-top:22px;background:var(--hero);color:#fff;border-radius:14px;padding:clamp(22px,3vw,32px);display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:20px 48px;align-items:center}
+.credit .tk{color:var(--green-br);display:block;margin-bottom:10px}
+.credit__row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-top:1px solid rgba(255,255,255,.14)}
+.credit__row span{color:#9DB0CC;font-size:15px}
+.credit__row b{font-size:24px;font-weight:800;color:#C3D0E4;text-decoration:line-through;text-decoration-thickness:2px}
+.credit__row.on b{font-size:34px;color:var(--green-br);text-decoration:none}
+.credit p{font-size:16px;color:#C3D0E4;line-height:1.6;max-width:52ch}
+.subt{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin-top:clamp(48px,6vw,72px)}
+.subd{font-size:15px;color:var(--muted);margin-top:8px;max-width:70ch}
+.calc2{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;margin-top:22px;align-items:start}
+.menu2{background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px 22px 14px;min-width:0}
+.menu2__fam{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);padding:18px 0 6px}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.item__t b{display:block;font-size:15px}
+.item__t span{font-size:13px;color:var(--muted)}
+.item__cr{font-size:14px;font-weight:700;color:var(--label);white-space:nowrap}
+.item.on .item__cr{color:var(--green)}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--ground);font-size:18px;font-weight:700;color:var(--ink);cursor:pointer;touch-action:manipulation}
+.qty button:hover{border-color:var(--green-br)}
+.qty output{min-width:22px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.item.on .qty output{color:var(--green)}
+.sum{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--hero);color:#fff;border-radius:14px;padding:24px;display:grid;gap:4px}
+.sum .tk{color:var(--green-br);margin-bottom:8px}
+.sum__row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.14)}
+.sum__row span{color:#9DB0CC;font-size:14px}
+.sum__row b{font-size:20px}
+.sum__row b.strike{color:#9DB0CC;text-decoration:line-through}
+.sum__row.big b{font-size:32px;color:var(--green-br)}
+.sum__row b.ok{color:#fff}
+.sum__note{font-size:13px;color:#C3D0E4;line-height:1.5;margin-top:8px}
+.reset{margin-top:12px;justify-self:start;background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:40px;padding:8px 16px;font:inherit;font-size:13px;cursor:pointer}
+.plan3{min-width:620px}
+.plan3 th,.plan3 td{text-align:left}
+.plan3 td:nth-child(3),.plan3 td:nth-child(4),.plan3 th:nth-child(3),.plan3 th:nth-child(4){text-align:right;white-space:nowrap}
+.plan3 tfoot td{font-weight:800}
+.team2{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+.team2 div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:6px;align-content:start;min-width:0}
+.team2 b{font-size:17px}
+.team2 b::before{content:"";display:block;width:28px;height:4px;border-radius:2px;margin-bottom:12px;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.team2 p{font-size:14px;color:var(--muted);line-height:1.5}
+.flow{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;counter-reset:f}
+.flow li{background:#fff;padding:20px 18px 22px;display:grid;gap:6px;align-content:start;counter-increment:f;min-width:0}
+.flow li::before{content:"0" counter(f);font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--green)}
+.flow b{font-size:15px}
+.flow p{font-size:13px;color:var(--muted);line-height:1.5}
+.brief{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,32px)}
+.brief__h{display:grid;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brief__h b{font-size:19px}
+.brief dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.brief dl div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.brief dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--label);padding-top:2px}
+.brief dd{margin:0;font-size:14.5px;color:var(--ink)}
+@media (max-width:980px){.how,.team2{grid-template-columns:1fr 1fr}.calc2,.credit{grid-template-columns:1fr}.sum{position:static}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}.brief dl{grid-template-columns:1fr}}
+@media (max-width:620px){.how,.team2{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.item{grid-template-columns:minmax(0,1fr) auto}.item__cr{grid-row:2}.brief dl div{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -467,7 +530,8 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <div class="refrow">
           <figure class="ref"><video src="img/ref-nivel2-a.mp4" poster="img/ref-nivel2-a.jpg" autoplay muted loop playsinline aria-label="Clip vertical de Natura Referidos: una mano toma un cargador portátil sobre una bandeja de madera, escena generada con IA."></video><span><b>Natura · Referidos</b>Escenas de producto generadas con IA.</span></figure>
           <figure class="ref"><video src="img/ref-nivel2-b.mp4" poster="img/ref-nivel2-b.jpg" autoplay muted loop playsinline aria-label="Clip vertical de Louisville Ladder: dos hombres usando una escalera multipropósito en un garaje, escena generada con IA, con el rótulo Twin (Trestle) Ladder."></video><span><b>Louisville Ladder · Hero video</b>Escenas de uso del producto generadas con IA.</span></figure>
-        </div></div>
+        </div>
+        <div class="pend"><b>Pendiente</b>Referencia con personajes ilustrados y animados.</div></div>
     </div>
   </div>
 </section>
@@ -522,12 +586,12 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       <article class="path path--hi">
         <span class="tk">Camino B · Recomendado</span>
         <h3>Plan de créditos con estrategia</h3>
-        <p>Mínimo 3 meses.</p>
+        <p>Mínimo 3 meses · USD 2.000 al mes (25 créditos).</p>
         <ul>
-          <li>Key visual.</li>
-          <li>Producción de los contenidos.</li>
           <li>Estrategia: qué decir, en qué canales, con qué duración y qué probar cada mes.</li>
-          <li>Descuento de hasta 20% por pieza.</li>
+          <li>Equipo de Samsa dedicado a ionava.</li>
+          <li>Videos, piezas gráficas, imágenes y personajes con el mismo sistema de créditos.</li>
+          <li>20% de descuento en cada crédito.</li>
         </ul>
       </article>
     </div>
@@ -536,53 +600,170 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 
 <section class="block block--tint">
   <div class="wide">
-    <p class="seclabel">06 · Camino B</p>
-    <h2 class="bigt">Plan de créditos <span class="grad">mínimo 3 meses</span></h2>
-    <div class="body-lg"><p>Incluye estrategia y key visual. Cada pieza tiene 20% de descuento sobre el precio del camino A y el monto de cada mes se usa en las piezas que definamos juntos: cápsulas, imágenes o versiones para probar.</p></div>
-    <div class="planbox">
-      <div><span class="tk">Plan de créditos · mínimo 3 meses</span><b class="num">USD 2.000 <small>/ mes</small></b></div>
-      <p>Ejemplo con el Nivel 1 · Motion graphics con IA entrenada: el video completo cuesta USD 2.500 por pedido y <b class="num">USD 2.000</b> con el plan.</p>
-    </div>
-    <div class="tbl-wrap"><table class="cmp">
-      <thead><tr><th></th><th>Camino A · por pedido</th><th>Camino B · plan</th></tr></thead>
-      <tbody>
-        <tr><td>Cápsula · Nivel 1 · Motion graphics con IA entrenada</td><td>USD 417</td><td>USD 333</td></tr>
-        <tr><td>Cápsula · Nivel 2 · Premium con IA generativa</td><td>USD 567</td><td>USD 453</td></tr>
-        <tr><td>Video completo · Nivel 1 · Motion graphics con IA entrenada</td><td>USD 2.500</td><td>USD 2.000</td></tr>
-        <tr><td>Video completo · Nivel 2 · Premium con IA generativa</td><td>USD 3.400</td><td>USD 2.720</td></tr>
-      </tbody>
-    </table></div>
-    <ol class="months">
-      <li><span class="tk">Mes 1</span><b>Estrategia, key visual y video explicativo</b><p>Definimos mensajes, canales y duraciones, y producimos el primer video.</p></li>
-      <li><span class="tk">Mes 2</span><b>Segundo video y piezas</b><p>Por qué ionava es mejor que un seguro tradicional, con la misma estética, más imágenes para redes.</p></li>
-      <li><span class="tk">Mes 3</span><b>Lo que mejor funcione</b><p>Nuevas cápsulas y versiones según los resultados de los dos primeros meses.</p></li>
-    </ol>
+    <p class="seclabel">06 · Entregables</p>
+    <h2 class="bigt">Lo que incluye <span class="grad">cada video</span></h2>
+    <div class="body-lg"><p>Aplica a los dos caminos de trabajo y a los dos niveles de estética.</p></div>
+    <ul class="incl">
+      <li><b>Key visual</b><span>A partir de la marca ionava.</span></li>
+      <li><b>Guion</b><span>Del video completo, dividido en cápsulas.</span></li>
+      <li><b>6 cápsulas</b><span>Exportadas de forma independiente.</span></li>
+      <li><b>Video completo vertical</b><span>9:16.</span></li>
+      <li><b>Video completo horizontal</b><span>16:9.</span></li>
+      <li><b>Locución con IA</b><span>En inglés.</span></li>
+      <li><b>Música</b><span>Para todo el video y las cápsulas.</span></li>
+      <li><b>Efectos de sonido</b><span>Para todo el video y las cápsulas.</span></li>
+      <li><b>Dos rondas de ajustes</b><span>Sobre el video completo.</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="block">
   <div class="wide">
-    <p class="seclabel">07 · Entregables</p>
-    <h2 class="bigt">Lo que <span class="grad">incluye</span></h2>
-    <div class="boxes2 boxes2--incl">
-      <div class="box"><span class="k">Incluye</span><ul>
-        <li>Key visual a partir de la marca ionava.</li>
-        <li>Guion del video completo, dividido en cápsulas.</li>
-        <li>6 cápsulas exportadas de forma independiente.</li>
-        <li>Video completo vertical 9:16.</li>
-        <li>Video completo horizontal 16:9.</li>
-        <li>Locución en inglés con IA.</li>
-        <li>Música.</li>
-        <li>Efectos de sonido.</li>
-        <li>Dos rondas de ajustes.</li></ul></div>
-      <div class="box"><span class="k">Condiciones</span><ul>
-        <li>Valores en dólares (USD).</li>
-        <li>Camino A: 50% al aprobar y 50% en la entrega final.</li>
-        <li>Camino B: mínimo 3 meses, pago al inicio de cada mes.</li>
-        <li>Vigencia de la propuesta: 15 días.</li></ul></div>
+    <p class="seclabel">07 · Plan de créditos</p>
+    <h2 class="bigt">Cómo funciona <span class="grad">el plan de créditos</span></h2>
+    <ol class="how">
+      <li><span class="how__n">1</span><b>Cada pieza tiene un valor en créditos</b><p>El video explicativo en Nivel 1 vale 25 créditos, una pieza madre gráfica vale 1. El menú está en la calculadora.</p></li>
+      <li><span class="how__n">2</span><b>Con el plan, cada crédito cuesta 20% menos</b><p>USD 100 por pedido, USD 80 con el plan. El descuento aplica a todas las piezas que sumes.</p></li>
+      <li><span class="how__n">3</span><b>Mínimo 25 créditos al mes, por 3 meses</b><p>USD 2.000 al mes reservan al equipo de Samsa para ionava. Si un mes necesitas más, sumas créditos a USD 80. Si usas menos, se acumulan por 60 días.</p></li>
+    </ol>
+    <div class="credit">
+      <div><span class="tk">Precio del crédito</span><div class="credit__row"><span>Por pedido</span><b class="num">USD 100</b></div><div class="credit__row on"><span>Con el plan</span><b class="num">USD 80</b></div></div>
+      <p>Ejemplo: el video explicativo en Nivel 1 son 25 créditos. Por pedido son USD 2.500; con el plan, USD 2.000. Los USD 500 de diferencia son el 20%.</p>
+    </div>
+
+    <h3 class="subt">Calculadora de créditos</h3>
+    <p class="subd">Suma las piezas de un mes. Viene cargada con un ejemplo: el video explicativo y un paquete de imágenes con personaje.</p>
+    <div class="calc2">
+      <div class="menu2" id="menu"></div>
+      <aside class="sum" aria-live="polite">
+        <span class="tk">Tu mes</span>
+        <div class="sum__row"><span>Créditos</span><b class="num" id="c-cr">30</b></div>
+        <div class="sum__row"><span>Por pedido</span><b class="num strike" id="c-ped">USD 3.000</b></div>
+        <div class="sum__row big"><span>Con el plan</span><b class="num" id="c-plan">USD 2.400</b></div>
+        <div class="sum__row"><span>Ahorro</span><b class="num ok" id="c-ah">USD 600</b></div>
+        <p class="sum__note" id="c-note">Supera el mínimo de 25 créditos: los 5 créditos extra se pagan a USD 80.</p>
+        <button type="button" class="reset" id="c-reset">Volver al ejemplo</button>
+      </aside>
+    </div>
+
+    <h3 class="subt">Ejemplo de 3 meses</h3>
+    <div class="tbl-wrap"><table class="plan3">
+      <thead><tr><th>Mes</th><th>Piezas</th><th>Créditos</th><th>Pago con el plan</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Estrategia, video explicativo en Nivel 1 y 6 imágenes con personaje</td><td>30</td><td>USD 2.400</td></tr>
+        <tr><td>2</td><td>4 cápsulas sobre el seguro tradicional, 4 piezas madre y 2 carruseles</td><td>20 · quedan 5 para el mes 3</td><td>USD 2.000</td></tr>
+        <tr><td>3</td><td>Lo que mejor funcionó: cápsulas, piezas y versiones</td><td>30 · 25 + 5 acumulados</td><td>USD 2.000</td></tr>
+      </tbody>
+      <tfoot><tr><td></td><td>Total con el plan · por pedido serían USD 8.000</td><td>80</td><td>USD 6.400</td></tr></tfoot>
+    </table></div>
+  </div>
+</section>
+
+<section class="block block--tint">
+  <div class="wide">
+    <p class="seclabel">08 · Equipo</p>
+    <h2 class="bigt">Tu equipo <span class="grad">en Samsa</span></h2>
+    <div class="body-lg"><p>Con el plan de 3 meses, este equipo trabaja de forma continua para ionava.</p></div>
+    <div class="team2">
+      <div><b>Estratega</b><p>Define mensajes, canales y duraciones, y lee los resultados cada mes.</p></div>
+      <div><b>Project manager</b><p>Recibe el brief, arma el plan del mes y lleva créditos y tiempos.</p></div>
+      <div><b>Director de arte</b><p>Cuida el key visual y la consistencia de la marca.</p></div>
+      <div><b>Especialista en IA</b><p>Entrena la IA con la marca y los personajes, y genera imagen y video.</p></div>
+      <div><b>Animador</b><p>Produce las cápsulas y las piezas animadas.</p></div>
+      <div><b>Editor</b><p>Montaje, sonido y versiones finales.</p></div>
+      <div><b>Guionista</b><p>Guiones y textos en inglés.</p></div>
     </div>
   </div>
 </section>
+
+<section class="block">
+  <div class="wide">
+    <p class="seclabel">09 · Cómo trabajamos</p>
+    <h2 class="bigt">El flujo <span class="grad">de cada mes</span></h2>
+    <ol class="flow">
+      <li><b>Brief</b><p>ionava envía un brief corto por pieza o por mes.</p></li>
+      <li><b>Plan del mes</b><p>Samsa propone las piezas y su costo en créditos. ionava aprueba.</p></li>
+      <li><b>Guion y boceto</b><p>Guion, frames de estilo o boceto de personaje para aprobar.</p></li>
+      <li><b>Producción</b><p>Primera versión de las piezas.</p></li>
+      <li><b>Ajustes</b><p>Hasta dos rondas.</p></li>
+      <li><b>Entrega y cierre</b><p>Archivos finales, saldo de créditos y lo que funcionó para el siguiente mes.</p></li>
+    </ol>
+    <div class="brief">
+      <div class="brief__h"><span class="tk">Ejemplo de brief</span><b>Mes 2 · Por qué ionava es mejor que un seguro tradicional</b></div>
+      <dl>
+        <div><dt>Objetivo</dt><dd>Explicar en qué se diferencia ionava de un seguro de salud tradicional.</dd></div>
+        <div><dt>Público</dt><dd>Freelancers y personas jóvenes y sanas en EE. UU.</dd></div>
+        <div><dt>Mensaje clave</dt><dd>Un seguro tradicional te cobra de más cuando estás sano. ionava te premia por estarlo.</dd></div>
+        <div><dt>Canal</dt><dd>Instagram: highlights y reels.</dd></div>
+        <div><dt>Formato</dt><dd>4 cápsulas de 10 a 20 s, 9:16, en inglés.</dd></div>
+        <div><dt>Referencias</dt><dd>El video explicativo del mes 1.</dd></div>
+        <div><dt>Fecha</dt><dd>Por definir.</dd></div>
+      </dl>
+    </div>
+    <div class="box boxcond"><span class="k">Condiciones</span><ul>
+      <li>Valores en dólares (USD).</li>
+      <li>Camino A · Por pedido: 50% al aprobar y 50% en la entrega final.</li>
+      <li>Camino B · Plan de créditos: mínimo 3 meses y 25 créditos al mes, pago al inicio de cada mes.</li>
+      <li>Créditos adicionales en el plan: USD 80 cada uno.</li>
+      <li>Los créditos no usados se acumulan y vencen a los 60 días.</li>
+      <li>Los personajes creados para ionava son propiedad de ionava una vez pagados.</li>
+      <li>Vigencia de la propuesta: 15 días.</li></ul></div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var M=[
+    ["Video","Video explicativo completo · Nivel 1",25,"Key visual, guion, 6 cápsulas, locución, música y efectos."],
+    ["Video","Video explicativo completo · Nivel 2",34,"Lo mismo, con imágenes y video generados con IA."],
+    ["Video","Cápsula animada hasta 20 s · Nivel 1",3,"Motion graphics sobre el key visual."],
+    ["Video","Cápsula hasta 20 s · Nivel 2",5,"Con planos generados con IA."],
+    ["Video","Video con IA hasta 8 planos",10,"Avatares o personajes, transiciones y efectos de sonido."],
+    ["Gráfica","Pieza madre gráfica · simple",1,"Gráfica sobre el key visual con copy. Incluye 1 adaptación."],
+    ["Gráfica","Pieza madre gráfica · avanzada",2,"Ilustración o tratamiento especial. Incluye 1 adaptación."],
+    ["Gráfica","Carrusel de 3 a 5 slides",2,"Estático, con copy."],
+    ["Gráfica","Carrusel de 6 a 8 slides",3,"1 o 2 slides animados."],
+    ["Gráfica","Loop animado de 4 s",2,"Gráfica animada en loop."],
+    ["IA","Imágenes con IA · 3 imágenes",3,"Producto o ambiente."],
+    ["IA","Imágenes con personaje · 6 imágenes",5,"Con el personaje de ionava."],
+    ["Personajes","Concept del universo y primer personaje",20,"Model sheet, expresiones y poses. Propiedad de ionava."],
+    ["Personajes","Personaje adicional",10,"Mismo universo visual."],
+    ["Personajes","Entrenamiento de la IA con los personajes",10,"Una sola vez, para que salgan iguales en todas las piezas."],
+    ["Otros","Key visual",6,"Incluido en los videos explicativos."],
+    ["Otros","Guion de 30 a 60 s",2,"Incluido en los videos explicativos."]
+  ];
+  var DEF={0:1,11:1};
+  var q={};
+  var menu=document.getElementById("menu");
+  var fmt=function(n){return "USD "+Math.round(n).toLocaleString("es-CO");};
+  var fam="";
+  M.forEach(function(it,i){
+    if(it[0]!==fam){fam=it[0];var h=document.createElement("div");h.className="menu2__fam";h.textContent=fam;menu.appendChild(h);}
+    var r=document.createElement("div");r.className="item";
+    r.innerHTML='<div class="item__t"><b>'+it[1]+'</b><span>'+it[3]+'</span></div><div class="item__cr num">'+it[2]+' cr</div><div class="qty"><button type="button" aria-label="Quitar '+it[1]+'" data-i="'+i+'" data-d="-1">−</button><output id="q'+i+'">0</output><button type="button" aria-label="Sumar '+it[1]+'" data-i="'+i+'" data-d="1">+</button></div>';
+    menu.appendChild(r);
+  });
+  function set(o){q={};for(var k in o)q[k]=o[k];render();}
+  function render(){
+    var cr=0;
+    M.forEach(function(it,i){var n=q[i]||0;cr+=n*it[2];var o=document.getElementById("q"+i);o.textContent=n;o.parentNode.parentNode.classList.toggle("on",n>0);});
+    var ped=cr*100, plan=Math.max(cr,25)*80;
+    document.getElementById("c-cr").textContent=cr;
+    document.getElementById("c-ped").textContent=fmt(ped);
+    document.getElementById("c-plan").textContent=fmt(plan);
+    document.getElementById("c-ah").textContent=fmt(Math.max(ped-plan,0));
+    var note;
+    if(cr===0) note="Suma piezas para ver el valor del mes.";
+    else if(cr<25) note="Por debajo del mínimo: pagas USD 2.000 y los "+(25-cr)+" créditos que sobran se acumulan por 60 días.";
+    else if(cr===25) note="Justo en el mínimo del plan: 25 créditos.";
+    else note="Supera el mínimo de 25 créditos: los "+(cr-25)+" créditos extra se pagan a USD 80.";
+    document.getElementById("c-note").textContent=note;
+  }
+  menu.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var i=+b.dataset.i;q[i]=Math.max(0,(q[i]||0)+(+b.dataset.d));render();});
+  document.getElementById("c-reset").addEventListener("click",function(){set(DEF);});
+  set(DEF);
+})();
+</script>
 
 <section class="marcas">
   <div class="wide"><p class="k">Marcas con las que trabajamos</p><img src="img/marcas.png" alt="Logos de marcas clientes de Samsa: Natura, Puma, Sanofi, Samsung, New Balance y otras."></div>
