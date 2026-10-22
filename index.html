@@ -464,6 +464,21 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .brief__list b{color:var(--ink);font-size:15px}
 .brief__cta{margin-top:22px;text-decoration:none}
 .brief__cta::before{display:none}
+.team2--c{grid-template-columns:repeat(3,minmax(0,1fr))}
+.team__note{margin-top:18px;font-size:14.5px;color:var(--muted)}
+.flows{display:grid;grid-template-columns:3fr 5fr;gap:22px;margin-top:36px}
+.flowbox{display:grid;gap:12px;align-content:start;min-width:0}
+.flowbox .flow{margin-top:0}
+.flow--m{grid-template-columns:1fr}
+.flow--p{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:980px){.flows{grid-template-columns:1fr}.team2--c{grid-template-columns:1fr}.flow--p{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.flow--p{grid-template-columns:repeat(7,minmax(0,1fr))}
+@media (max-width:980px){.flow--p{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.addon{margin-top:22px;background:#fff;border:1px dashed var(--green-br);border-radius:14px;padding:22px 26px;display:grid;gap:10px}
+.addon p{font-size:15px;color:var(--muted);max-width:70ch}
+.addon ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px}
+.addon li{font-size:14.5px;color:var(--ink);display:flex;gap:10px;align-items:baseline}
+.addon li b{color:var(--green);font-size:16px}
 </style>
 </head>
 <body>
@@ -478,15 +493,15 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       <div>
         <p class="hero__eyebrow">ionava · Cotización</p>
         <h1 class="hero__title">Video explicativo <span class="grad">ionava</span></h1>
-        <p class="hero__sub">Video explicativo de 90 segundos sobre el ecosistema ionava, dividido en seis cápsulas de 15 segundos. Dos niveles de estética y dos caminos de trabajo: ejecución o plan de créditos con estrategia.</p>
+        <p class="hero__sub">Video explicativo de 90 segundos sobre el ecosistema ionava, dividido en seis cápsulas de 10 a 20 segundos, según lo que necesite cada mensaje. Dos niveles de estética y dos caminos de trabajo: ejecución o plan de créditos con estrategia.</p>
         <div class="facts">
           <div class="fact"><span class="fact__v num">6</span><span class="fact__k">Cápsulas</span></div>
-          <div class="fact"><span class="fact__v num">15 s</span><span class="fact__k">Cada una</span></div>
+          <div class="fact"><span class="fact__v num">10–20 s</span><span class="fact__k">Cada una</span></div>
           <div class="fact"><span class="fact__v num">9:16</span><span class="fact__k">Formato</span></div>
         </div>
       </div>
       <figure class="cut">
-        <div class="cut__head"><span>Video explicativo · 90 s</span><span>Corte cada 15 s</span></div>
+        <div class="cut__head"><span>Video explicativo · 90 s</span><span>Bloques de 10 a 20 s</span></div>
         <div class="cut__bar a">
           <span>Cápsula 1</span><span>Cápsula 2</span><span>Cápsula 3</span><span>Cápsula 4</span><span>Cápsula 5</span><span>Cápsula 6</span>
         </div>
@@ -511,9 +526,9 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">01 · Alcance</p>
     <h2 class="bigt">Alcance <span class="grad">de la propuesta</span></h2>
-    <div class="body-lg"><p>Un video de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se divide en seis cápsulas de 15 segundos que se ven una detrás de otra.</p></div>
+    <div class="body-lg"><p>Un video de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se divide en seis cápsulas que se ven una detrás de otra. Cada una dura entre 10 y 20 segundos: la duración la define el mensaje.</p></div>
     <div class="traits">
-      <div class="trait"><span class="tk">Formato</span><h3>6 cápsulas de 15 s</h3><p>90 segundos en total, en vertical 9:16, con la misma línea visual de principio a fin.</p></div>
+      <div class="trait"><span class="tk">Formato</span><h3>6 cápsulas de 10 a 20 s</h3><p>Unos 90 segundos en total, en vertical 9:16, con la misma línea visual de principio a fin.</p></div>
       <div class="trait"><span class="tk">Uso</span><h3>Highlights y video completo</h3><p>Cada cápsula funciona sola en los highlights de Instagram. Unidas forman el video de 90 segundos.</p></div>
       <div class="trait"><span class="tk">Idioma</span><h3>Locución en inglés</h3><p>Como el sitio de ionava.</p></div>
       <div class="trait"><span class="tk">Producción</span><h3>Con IA</h3><p>El volumen sale con herramientas de IA. Cada pieza pasa por el equipo de dirección de arte de Samsa.</p></div>
@@ -572,7 +587,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">04 · Costos</p>
     <h2 class="bigt">Costo <span class="grad">por nivel de estética</span></h2>
-    <div class="body-lg"><p>Los dos niveles incluyen key visual, las 6 cápsulas, el video completo, locución en inglés con voz IA, música, efectos de sonido y dos rondas de ajustes. Los costos aplican a los dos caminos de trabajo.</p></div>
+    <div class="body-lg"><p>Los dos niveles incluyen key visual, las 6 cápsulas, el video completo, locución en inglés con voz IA, música, efectos de sonido y dos rondas de ajustes. Los dos niveles son híbridos: IA y equipo de Samsa trabajan en cada pieza. Los costos aplican a los dos caminos de trabajo.</p></div>
     <div class="levels">
       <article class="level">
         <span class="tk">Nivel 1</span>
@@ -588,7 +603,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       <article class="level level--hi">
         <span class="tk">Nivel 2</span>
         <h3>Premium con IA generativa</h3>
-        <p class="level__d">Imágenes, ilustraciones y videos generados con IA: escenas, personajes y la Vault, con motion graphics encima.</p>
+        <p class="level__d">Estética corporativa de software: motion graphics con personajes, ilustraciones y escenas generados con IA.</p>
         <ul>
           <li>Key visual a partir de la marca ionava.</li>
           <li>Guion visual escena por escena: locución, imagen y texto en pantalla.</li>
@@ -597,6 +612,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <div class="level__p"><span>2 a 3 semanas</span><b class="num">USD 3.400</b></div>
       </article>
     </div>
+    <div class="addon"><span class="tk">Opcional · Personajes de marca</span><p>Diseño de personajes propios para ionava, que quedan como propiedad de la marca, y entrenamiento de la IA para que salgan iguales en todas las piezas.</p><ul><li><b class="num">20 cr</b>Concept del universo y primer personaje</li><li><b class="num">10 cr</b>Personaje adicional</li><li><b class="num">10 cr</b>Entrenamiento de la IA con los personajes</li></ul></div>
   </div>
 </section>
 
@@ -702,42 +718,43 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">08 · Equipo</p>
     <h2 class="bigt">Tu equipo <span class="grad">en Samsa</span></h2>
-    <div class="body-lg"><p>Con el plan de 3 meses, este equipo trabaja de forma continua para ionava.</p></div>
-    <div class="team2">
-      <div><b>Estratega</b><p>Define mensajes, canales y duraciones, y lee los resultados cada mes.</p></div>
-      <div><b>Project manager</b><p>Recibe el brief, arma el plan del mes y lleva créditos y tiempos.</p></div>
-      <div><b>Director de arte</b><p>Cuida el key visual y la consistencia de la marca.</p></div>
-      <div><b>Especialista en IA</b><p>Entrena la IA con la marca y los personajes, y genera imagen y video.</p></div>
-      <div><b>Animador</b><p>Produce las cápsulas y las piezas animadas.</p></div>
-      <div><b>Editor</b><p>Montaje, sonido y versiones finales.</p></div>
-      <div><b>Guionista</b><p>Guiones y textos en inglés.</p></div>
+    <div class="body-lg"><p>Con el plan de 3 meses, ionava trabaja con una célula fija de Samsa.</p></div>
+    <div class="team2 team2--c">
+      <div><b>Producer / Director</b><p>Senior. Tu único punto de contacto: dirige la cuenta, lleva tiempos y créditos, y asegura que cada pieza cumpla el objetivo.</p></div>
+      <div><b>Content Planner</b><p>Semi senior. Convierte las necesidades del mes en un plan de piezas, escribe guiones y copies, y cuida la coherencia de los mensajes.</p></div>
+      <div><b>Content Creator</b><p>Semi senior. Diseña y anima las piezas con herramientas de IA y templates de la marca.</p></div>
     </div>
+    <p class="team__note">Reuniones en inglés · reunión mensual de seguimiento · cuando el mes lo pide, se suman especialistas de Samsa: animación, ilustración, edición y sonido.</p>
   </div>
 </section>
 
 <section class="block">
   <div class="wide">
     <p class="seclabel">09 · Cómo trabajamos</p>
-    <h2 class="bigt">El flujo <span class="grad">de cada mes</span></h2>
-    <ol class="flow">
-      <li><b>Brief</b><p>ionava envía un brief corto por pieza o por mes.</p></li>
-      <li><b>Plan del mes</b><p>Samsa propone las piezas y su costo en créditos. ionava aprueba.</p></li>
-      <li><b>Guion y boceto</b><p>Guion, frames de estilo o boceto de personaje para aprobar.</p></li>
-      <li><b>Producción</b><p>Primera versión de las piezas.</p></li>
+    <h2 class="bigt">Cómo <span class="grad">trabajamos</span></h2>
+    <div class="body-lg"><p>Ejemplo del flujo de una pieza estándar, de principio a fin.</p></div>
+    <ol class="flow flow--p">
+      <li><b>Brief</b><p>ionava llena la plantilla.</p></li>
+      <li><b>Guion</b><p>Mensaje y duración de cada bloque.</p></li>
+      <li><b>Moodboard</b><p>Referencias y dirección visual.</p></li>
+      <li><b>Key visual</b><p>El estilo de la pieza, para aprobar.</p></li>
+      <li><b>Diseño y producción</b><p>Diseño y animación.</p></li>
       <li><b>Ajustes</b><p>Hasta dos rondas.</p></li>
-      <li><b>Entrega y cierre</b><p>Archivos finales, saldo de créditos y lo que funcionó para el siguiente mes.</p></li>
+      <li><b>Entrega</b><p>Archivos finales en los formatos acordados.</p></li>
     </ol>
     <div class="brief">
-      <div class="brief__h"><span class="tk">Plantilla de brief</span><b>Samsa Videos · Brief</b></div>
-      <p class="brief__p">Es el formato con el que arranca cada pieza. ionava lo llena y el equipo de Samsa lo completa en la primera reunión.</p>
+      <div class="brief__h"><span class="tk">Plantilla de brief</span><b>ionava × Samsa · Video brief</b></div>
+      <p class="brief__p">Un brief por pieza. ionava llena lo que sabe y el equipo de Samsa completa el resto en la reunión de arranque.</p>
       <ul class="brief__list">
-        <li><b>Brief</b>Fechas, empresa, sitio web y ubicación.</li>
-        <li><b>Producto o servicio</b>Descripción, cualidades principales, palabras clave y tono.</li>
-        <li><b>Video</b>Referencia principal, tipo, duración, idioma, locución y subtítulos.</li>
-        <li><b>Público</b>B2B o B2C y perfil del cliente o de quien decide.</li>
-        <li><b>Creatividad</b>Recursos visuales, técnica de animación, estilo, música y referencias.</li>
+        <li><b>Proyecto</b>Nombre de la pieza, fechas y estimado de créditos.</li>
+        <li><b>Marca</b>Producto o función, recursos de marca y textos legales.</li>
+        <li><b>Objetivo y mensaje</b>Mensaje clave, puntos de apoyo y llamado a la acción.</li>
+        <li><b>Público</b>A quién va y qué sabe ya de ionava.</li>
+        <li><b>Pieza</b>Tipo, nivel de estética, duración, formatos, canales y locución.</li>
+        <li><b>Creatividad</b>Tono, personajes, qué incluir, qué evitar y referencias.</li>
+        <li><b>Aprobaciones</b>Quién aprueba y cómo se entregan los comentarios.</li>
       </ul>
-      <a class="cta brief__cta" href="https://docs.google.com/document/d/1s4yLfDj_AvNeDnuJ8k6A_XJGwcy2cwRtBqO7h5sd62E/edit?tab=t.0" target="_blank" rel="noopener">Ver la plantilla de brief</a>
+      <a class="cta brief__cta" href="https://docs.google.com/document/d/1yByvhXhww5amZgWf0dpC4X4yuKnw1yDGHD1ilJLqIug/edit" target="_blank" rel="noopener">Ver la plantilla de brief</a>
     </div>
     <div class="box boxcond"><span class="k">Condiciones</span><ul>
       <li>Valores en dólares (USD).</li>
@@ -746,6 +763,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       <li>Créditos adicionales en el plan: USD 80 cada uno.</li>
       <li>Los créditos no usados se acumulan y vencen a los 60 días.</li>
       <li>Los personajes creados para ionava son propiedad de ionava una vez pagados.</li>
+      <li>Videos con arte 100% personalizado (ilustración y animación hechas desde cero) tienen un costo mayor y se cotizan aparte.</li>
       <li>Vigencia de la propuesta: 15 días.</li></ul></div>
   </div>
 </section>
