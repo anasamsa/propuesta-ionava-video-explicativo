@@ -479,6 +479,18 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .addon ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px}
 .addon li{font-size:14.5px;color:var(--ink);display:flex;gap:10px;align-items:baseline}
 .addon li b{color:var(--green);font-size:16px}
+/* v11: hero sin línea de tiempo, temas desplegables */
+.hero__grid{grid-template-columns:minmax(0,1fr)}
+.hero__sub{max-width:52ch}
+.fold{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.fold>summary{list-style:none;cursor:pointer;padding:22px 64px 22px 26px;display:grid;gap:4px;position:relative}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:700;color:#0E1B34;background:linear-gradient(96deg,var(--green-br),var(--blue-br))}
+.fold[open]>summary::after{content:"−"}
+.fold>summary b{font-size:19px}
+.fold__n{font-size:14px;color:var(--muted)}
+.fold .vid{margin:0;border:0;border-top:1px solid var(--line);border-radius:0}
+.fold .vid--one{margin-top:0}
 </style>
 </head>
 <body>
@@ -493,21 +505,13 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
       <div>
         <p class="hero__eyebrow">ionava · Cotización</p>
         <h1 class="hero__title">Video explicativo <span class="grad">ionava</span></h1>
-        <p class="hero__sub">Video explicativo de 90 segundos sobre el ecosistema ionava, dividido en seis cápsulas de 10 a 20 segundos, según lo que necesite cada mensaje. Dos niveles de estética y dos caminos de trabajo: por pedido o plan de créditos.</p>
+        <p class="hero__sub">Un video explicativo sobre el ecosistema ionava y una cápsula por cada subtema. La duración de cada cápsula la define el mensaje. Dos niveles de estética y dos caminos de trabajo: por pedido o plan de créditos.</p>
         <div class="facts">
-          <div class="fact"><span class="fact__v num">6</span><span class="fact__k">Cápsulas</span></div>
-          <div class="fact"><span class="fact__v num">10–20 s</span><span class="fact__k">Cada una</span></div>
-          <div class="fact"><span class="fact__v num">9:16</span><span class="fact__k">Formato</span></div>
+          <div class="fact"><span class="fact__v num">1</span><span class="fact__k">Video completo</span></div>
+          <div class="fact"><span class="fact__v num">6</span><span class="fact__k">Cápsulas por subtema</span></div>
+          <div class="fact"><span class="fact__v num">9:16 · 16:9</span><span class="fact__k">Formatos</span></div>
         </div>
       </div>
-      <figure class="cut">
-        <div class="cut__head"><span>Video explicativo · 90 s</span><span>Bloques de 10 a 20 s</span></div>
-        <div class="cut__bar a">
-          <span>Cápsula 1</span><span>Cápsula 2</span><span>Cápsula 3</span><span>Cápsula 4</span><span>Cápsula 5</span><span>Cápsula 6</span>
-        </div>
-        <div class="cut__ruler num"><span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>75</span><span>90 s</span></div>
-        <figcaption>Separadas van a los highlights de Instagram; unidas forman el video completo.</figcaption>
-      </figure>
     </div>
   </div>
 </header>
@@ -528,7 +532,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     <h2 class="bigt">Alcance <span class="grad">de la propuesta</span></h2>
     <div class="body-lg"><p>Un video de 90 segundos sobre el ecosistema ionava: qué es, sus productos, cómo funciona y cómo se accede. Se divide en seis cápsulas que se ven una detrás de otra. Cada una dura entre 10 y 20 segundos: la duración la define el mensaje.</p></div>
     <div class="traits">
-      <div class="trait"><span class="tk">Formato</span><h3>6 cápsulas de 10 a 20 s</h3><p>Unos 90 segundos en total, en vertical 9:16, con la misma línea visual de principio a fin.</p></div>
+      <div class="trait"><span class="tk">Formato</span><h3>1 video completo y cápsulas por subtema</h3><p>Un video completo de unos 90 segundos y 6 cápsulas, una por subtema, en vertical 9:16 y horizontal 16:9, con la misma línea visual.</p></div>
       <div class="trait"><span class="tk">Uso</span><h3>Highlights y video completo</h3><p>Cada cápsula funciona sola en los highlights de Instagram. Unidas forman el video de 90 segundos.</p></div>
       <div class="trait"><span class="tk">Idioma</span><h3>Locución en inglés</h3><p>Como el sitio de ionava.</p></div>
       <div class="trait"><span class="tk">Producción</span><h3>Con IA</h3><p>El volumen sale con herramientas de IA. Cada pieza pasa por el equipo de dirección de arte de Samsa.</p></div>
@@ -541,7 +545,9 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     <p class="seclabel">02 · Contenido</p>
     <h2 class="bigt">Posibles temas <span class="grad">de cápsula</span></h2>
     <div class="body-lg"><p>Propuesta inicial a partir del sitio de ionava. Se define en el guion.</p></div>
-    <div class="vid vid--one">
+    <details class="fold" open>
+      <summary><span class="tk">Video explicativo</span><b>6 subtemas del ecosistema ionava</b></summary>
+      <div class="vid vid--one">
       <ol class="caps">
         <li><b>Qué es ionava</b><p>No es un seguro: es un sistema que te prepara financieramente y te premia por estar sano.</p></li>
         <li><b>La Vault</b><p>Efectivo reservado de $300k, $700k o $1M para los grandes imprevistos de salud.</p></li>
@@ -550,9 +556,11 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <li><b>Cómo se accede</b><p>Health Score gratis, eliges tu Vault y el precio queda fijo de por vida.</p></li>
         <li><b>Junto a tu plan actual</b><p>ionava se suma al plan que ya tienes, no lo reemplaza.</p></li>
       </ol>
-    </div>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span class="tk">Otros temas</span><b>Por qué ionava es mejor que un seguro tradicional</b><span class="fold__n">Otra narrativa con la misma estética, para un siguiente video.</span></summary>
     <div class="vid vid--other">
-      <div class="vid__h"><span class="tk">Otros temas</span><h3>Por qué ionava es mejor que un seguro tradicional</h3><p class="vid__n">Otra narrativa con la misma estética, para un siguiente video.</p></div>
       <ul class="others">
         <li><b>Seguro de enfermedad</b><p>El seguro tradicional cuesta mucho y da poco cuando estás sano.</p></li>
         <li><b>La mitad del costo</b><p>Precio fijo de por vida y se cancela cuando quieras.</p></li>
@@ -560,6 +568,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <li><b>Respaldo</b><p>Modelo validado por Milliman. El dinero de la Wallet es tuyo.</p></li>
       </ul>
     </div>
+    </details>
   </div>
 </section>
 
@@ -620,7 +629,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   <div class="wide">
     <p class="seclabel">05 · Caminos</p>
     <h2 class="bigt">Dos caminos <span class="grad">de trabajo</span></h2>
-    <div class="reco"><span class="tk">Recomendación</span><p>Para un video explicativo, 15 segundos puede llegar a ser un tiempo corto para explicar temas complejos. Lo mejor es no fijar un tiempo exacto: si cada corte tiene que caer en el segundo 15, las cápsulas se sienten muy rápidas o se quedan cortas y se pierde el ritmo. Cada bloque debe durar entre 10 y 20 segundos, según lo que necesite el contenido, y después los bloques se unen en una sola pieza. Por eso recomendamos el plan de créditos: con el equipo trabajando cada mes, definimos juntos la duración y el mensaje de cada pieza.</p></div>
+    <div class="reco"><span class="tk">Recomendación</span><p>Las cápsulas deben durar entre 10 y 20 segundos, con cortes de 10, 15 o 20 segundos según cómo se desarrolle cada tema.</p></div>
     <div class="paths">
       <article class="path">
         <span class="tk">Camino A</span>
