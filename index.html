@@ -506,6 +506,16 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
 .credit{margin-top:18px}
 .subt{margin-top:56px}
 .boxcond{margin-top:24px}
+/* v13: tarjeta content production en portada */
+.hero__grid{grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}
+.cpcard{display:block;border-radius:14px;overflow:hidden;text-decoration:none;color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.cpcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.cpcard:hover img{transform:scale(1.03)}
+.cpcard__b{display:grid;gap:6px;padding:18px 20px 20px}
+.cpcard__k{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green-br)}
+.cpcard__b b{font-size:20px}
+.cpcard .cta{justify-self:start;margin-top:6px}
+@media (max-width:980px){.hero__grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -527,6 +537,10 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
           <div class="fact"><span class="fact__v num">9:16 · 16:9</span><span class="fact__k">Formatos</span></div>
         </div>
       </div>
+      <a class="cpcard" href="https://samsa.studio/creative/content-production/" target="_blank" rel="noopener">
+        <img src="img/samsa-content-production.jpg" alt="Portada de Content Production de Samsa: pantallas que salen de un portátil sobre una mesa.">
+        <span class="cpcard__b"><span class="cpcard__k">Samsa · Content Production</span><b>Animación, film e IA generativa</b><span class="cta">Ver servicio</span></span>
+      </a>
     </div>
   </div>
 </header>
@@ -636,7 +650,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <div class="level__p"><span>2 a 3 semanas</span><b class="num">USD 3.400</b></div>
       </article>
     </div>
-    <div class="addon"><span class="tk">Opcional · Personajes de marca</span><p>Diseño de personajes propios para ionava, que quedan como propiedad de la marca.</p><ul><li><b class="num">20 cr</b>Concept del universo y primer personaje</li><li><b class="num">10 cr</b>Personaje adicional</li></ul></div>
+    <div class="addon"><span class="tk">Opcional · Personajes de marca</span><p>Diseño de personajes propios para ionava, que quedan como propiedad de la marca.</p><ul><li><b class="num">5 cr</b>Concept del universo y primer personaje</li><li><b class="num">2 cr</b>Personaje adicional</li></ul></div>
   </div>
 </section>
 
@@ -710,16 +724,16 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
     </div>
 
     <h3 class="subt">Calculadora de créditos</h3>
-    <p class="subd">Suma las piezas de un mes. Viene cargada con un ejemplo: el video explicativo y un paquete de imágenes con personaje. La cantidad de piezas se amplía según la necesidad de ionava, con todo nuestro portafolio de servicios.</p>
+    <p class="subd">Suma las piezas de un mes. Viene cargada con un ejemplo: el video explicativo en Nivel 1. Una cápsula suelta cuesta un poco más que dentro del video completo, porque se produce por separado. La cantidad de piezas se amplía según la necesidad de ionava, con todo nuestro portafolio de servicios.</p>
     <div class="calc2">
       <div class="menu2" id="menu"></div>
       <aside class="sum" aria-live="polite">
         <span class="tk">Tu mes</span>
-        <div class="sum__row"><span>Créditos</span><b class="num" id="c-cr">30</b></div>
-        <div class="sum__row"><span>Por pedido</span><b class="num strike" id="c-ped">USD 3.000</b></div>
-        <div class="sum__row big"><span>Con el plan</span><b class="num" id="c-plan">USD 2.400</b></div>
-        <div class="sum__row"><span>Ahorro</span><b class="num ok" id="c-ah">USD 600</b></div>
-        <p class="sum__note" id="c-note">Supera el mínimo de 25 créditos: los 5 créditos extra se pagan a USD 80.</p>
+        <div class="sum__row"><span>Créditos</span><b class="num" id="c-cr">25</b></div>
+        <div class="sum__row"><span>Por pedido</span><b class="num strike" id="c-ped">USD 2.500</b></div>
+        <div class="sum__row big"><span>Con el plan</span><b class="num" id="c-plan">USD 2.000</b></div>
+        <div class="sum__row"><span>Ahorro</span><b class="num ok" id="c-ah">USD 500</b></div>
+        <p class="sum__note" id="c-note">Justo en el mínimo del plan: 25 créditos.</p>
         <button type="button" class="reset" id="c-reset">Volver al ejemplo</button>
       </aside>
     </div>
@@ -756,18 +770,17 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   var M=[
     ["Video","Video explicativo · Nivel 1 · Motion graphics con IA entrenada",25,"Key visual, guion, 6 cápsulas exportadas, video completo vertical y horizontal, locución, música y efectos."],
     ["Video","Video explicativo · Nivel 2 · Premium con IA generativa (personajes)",34,"Lo mismo, con personajes, ilustraciones y escenas generados con IA."],
-    ["Video","Cápsula de 10 a 20 s · Nivel 1 · Motion graphics con IA entrenada",3,"Motion graphics sobre el key visual."],
-    ["Video","Cápsula de 10 a 20 s · Nivel 2 · Premium con IA generativa (personajes)",5,"Con personajes y escenas generados con IA."],
+    ["Video","Cápsula de 10 a 20 s · Nivel 1 · Motion graphics con IA entrenada",5,"Motion graphics sobre el key visual."],
+    ["Video","Cápsula de 10 a 20 s · Nivel 2 · Premium con IA generativa (personajes)",7,"Con personajes y escenas generados con IA."],
     ["Gráfica","Pieza madre gráfica · simple",1,"Gráfica sobre el key visual con copy. Incluye 1 adaptación."],
     ["Gráfica","Pieza madre gráfica · avanzada",2,"Ilustración o tratamiento especial. Incluye 1 adaptación."],
     ["Gráfica","Carrusel de 3 a 5 slides",2,"Estático, con copy."],
     ["Gráfica","Carrusel de 6 a 8 slides",3,"1 o 2 slides animados."],
     ["Gráfica","Loop animado de 4 s",2,"Gráfica animada en loop."],
-    ["Personajes","Imágenes con personaje · 6 imágenes",5,"Con el personaje de ionava."],
-    ["Personajes","Concept del universo y primer personaje",20,"Model sheet, expresiones y poses. Propiedad de ionava."],
-    ["Personajes","Personaje adicional",10,"Mismo universo visual."]
+    ["Personajes","Concept del universo y primer personaje",5,"Model sheet, expresiones y poses. Propiedad de ionava."],
+    ["Personajes","Personaje adicional",2,"Mismo universo visual."]
   ];
-  var DEF={0:1,9:1};
+  var DEF={0:1};
   var q={};
   var menu=document.getElementById("menu");
   var fmt=function(n){return "USD "+Math.round(n).toLocaleString("es-CO");};
