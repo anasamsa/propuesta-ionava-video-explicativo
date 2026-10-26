@@ -648,7 +648,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
           <li>Scene-by-scene visual script: voice-over, image and on-screen text.</li>
           <li>6 capsules and full video.</li>
         </ul>
-        <div class="level__p"><span>2 to 3 weeks</span><b class="num">USD 3,696</b></div>
+        <div class="level__p"><span>2 to 3 weeks</span><b class="num">USD 3,700</b></div>
       </article>
     </div>
     <div class="addon"><span class="tk">Optional · Brand characters</span><p>Original characters designed for ionava, owned by the brand.</p><ul><li><b class="num">5 cr</b>Universe concept and first character</li><li><b class="num">2 cr</b>Each additional character</li></ul></div>
@@ -685,7 +685,7 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
         <h3>Per order</h3>
         <p>Samsa writes the scripts and produces the capsules at the chosen aesthetic level, at the prices above.</p>
         <ul>
-          <li>Price per video: USD 2,800 or USD 3,696, depending on the level.</li>
+          <li>Price per video: USD 2,800 or USD 3,700, depending on the level.</li>
           <li>Key visual included.</li>
         </ul>
       </article>
@@ -796,7 +796,8 @@ table.menu td:last-child{color:var(--ink);font-weight:800;white-space:nowrap}
   function render(){
     var cr=0;
     M.forEach(function(it,i){var n=q[i]||0;cr+=n*it[2];var o=document.getElementById("q"+i);o.textContent=n;o.parentNode.parentNode.classList.toggle("on",n>0);});
-    var ped=cr*112, plan=Math.max(cr,25)*92;
+    var n2=q[1]||0; // Nivel 2 redondeado: USD 3.700 por pedido y 3.050 con plan
+    var ped=cr*112+n2*4, plan=(cr<25?25*92:cr*92+n2*14);
     document.getElementById("c-cr").textContent=cr;
     document.getElementById("c-ped").textContent=fmt(ped);
     document.getElementById("c-plan").textContent=fmt(plan);
